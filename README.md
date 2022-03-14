@@ -1,7 +1,15 @@
-# maturita-docs
-Collection of documents for my "finals".
+# Maturita-docs
 
-# Můj výběr knih k maturitní četbě
+Tento repositář obsahuje kompletní sbírku všech souborů, které jsem vypracoval během přípravy na maturitu a během vývoje projektu k dlouhodobé maturitní práci, jejíž zdrojový kód zde ale není, jelikož se jedná o komerční projekt.
+
+Repositář je rozdělena více částí:
+
+- **cetba** - obsahuje všechny mnou vypracování knihy, která po nás vyučující během studia požadoval.
+- **documents**  - obsahuje dokumenty, které jsem vypracoval k dlouhodobé maturitní práci a nebo do soutěží s ní spojených.
+- **images** - dump všech obrázků a fotek, které jsem použil jak ve zprávách a dokumentech, tak i například v prezentacích.
+- **examinations** - jelikož nás během průběhu čtvrtého ročníků vyučující zkoušel na námi vybrané knihy, rozhodl jsem se, že si každou knihu vypracuji mnohem detailněji a tato složka tyto podrobné rozbory obsahuje.
+
+## Můj výběr knih k maturitní četbě
 
 
 | **n.**          | **ID** | **Autor**                | **Dílo**               | **Vypracováno** |   
