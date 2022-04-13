@@ -1,0 +1,102 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[sfdefault]{ClearSans}
+\usepackage[T1]{fontenc}
+\usepackage[left=35mm,right=20mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[czech]{babel}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[list=true]{subcaption}
+\usepackage{acronym}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{changepage}
+
+\usepackage{tocloft}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % for sections
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\graphicspath{ {./img/} }
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.1em}
+\linespread{1.5}
+
+\title{Fotografický web a kompletní administrační systém}
+\author{Jiří Vala}
+\date{}
+
+\begin{document}
+
+\begin{titlepage}
+  \begin{adjustwidth}{-20mm}{-7.5mm} 
+		\vspace*{-1.5cm}
+		\noindent\includegraphics[width=\linewidth]{header.png}
+	\end{adjustwidth}
+	\begin{center}
+		\vspace*{0.2cm}
+		\Huge\textbf{MATURITNÍ ZKOUŠKA}
+		\vspace*{1cm} \\
+		\large \emph{PRAKTICKÁ ZKOUŠKA Z ODBORNÝCH PŘEDMĚTŮ}
+		\vspace*{1cm} \\
+		\Large Téma č. ? \\
+		\vspace*{1cm}
+		\Large Fotografický web a kompletní administrační systém \\
+		\vfill
+		\normalsize
+	\end{center}
+	\begin{tabularx}{\textwidth}{l@{\hskip 0.5cm}XXl}
+		Obor vzdělání: & \multicolumn{3}{c}{\textbf{18 – 20 – M/01 Informační technologie}} \\[10pt]
+		Třída: & \textbf{4. IT} & Autor práce: & \textbf{Jiří Vala} \\[10pt]
+		Školní rok: & \textbf{2021/22} & Vedoucí učitel práce: & \textbf{Ing. Jiří Sumbal}
+		\vspace*{1cm}
+	\end{tabularx}
+\end{titlepage}
+
+\section*{Prohlášení Autora}
+  „Prohlašuji, že jsem tuto práci vypracoval samostatně a použil jsem literárních pramenů a informací, které cituji a uvádím v seznamu použité literatury a dalších zdrojů informací.“ \\
+	\vspace*{0.5cm} \\
+	\renewcommand{\arraystretch}{2}
+	\begin{tabularx}{\textwidth}{l@{\hskip 0.75cm}X@{\hskip 1.5cm}X@{\hskip 0.75cm}l}
+		Ve Frýdku-Místku, dne: & \dotfill & \dotfill & podpis \\
+	\end{tabularx}
+  \clearpage
+
+  \section*{Anotace}
+  Popis celého projektu -> Anotace
+
+  \section*{Klíčová slova}
+  
+  \noindent TODO: Klíčová slova
+  
+  \clearpage
+  
+  \tableofcontents
+  
+  \clearpage
+
+  \chapter{Vymezení pojmů}
+  \begin{enumerate}
+    \item \textbf{DMP} - Dlouhodobá maturitní práce
+  \end{enumerate}
+  
+  \chapter{Zadání práce}
+
+  \chapter{Klíčové vlastnosti a požadavky projektu}
+  \chapter{Struktura projektu}
+  \chapter{Průběh vývoje}
+  \chapter{Webová prezentace}
+  \chapter{Administrační systém}
+  \chapter{VPS - Virtual Private Server}
+  \chapter{Závěr}
+
+
+\end{document}
