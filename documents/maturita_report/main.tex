@@ -112,15 +112,33 @@
 	\end{tabularx}
   \clearpage
 
+  \chapter*{Zadání práce}
+  \begin{enumerate}
+    \item Návrh a koncepce webu - shrnutí požadavků zákazníka a návrh řešení
+    \item Použité platoformy, technologie a software
+    \item Vývoj webové stránky
+    \item Vývoj administračního systému
+    \item Hosting
+    \item Vytvoření vlastního webového serveru a virtuálního webu na bázi virtuálního počítače
+  \end{enumerate}
+  \clearpage
+
+
   \section*{Anotace}
   Tato práce se zabývá průběhem vývoje webové stránky pro amatérského 
   fotografa ve formě virtuální galerie a jejího administračního systému.
   Popisuje použité technologie a postupy ve vývoji spolu s konfigurací
   jednotlivých služeb klíčových ke spuštění celého projektu
   na produkční server a jeho správné a dlouhodobě nezávadné fungování.
+  Cílem práce bylo vytvořit funkční produkt v podobě webu a jeho administračním
+  systémem se všemi aspekty komerčního projektu pro koncového zákazníka, 
+  který jej bude používat jako své virtuální portfolio.
   
   \section*{Anotation}
-  This thesis focuses on the development process\dots \\TODO!
+  This thesis focuses on the development process of a website for an amateur photographer
+  in a form of virtual gallery and it's content management system. Describes used technologies
+  and procedures used in the development as well as configuration of individual services mandatory for
+  deployment of the whole project on a production server and it's seamless and longterm functioning.
 
   \section*{Klíčová slova}
   
@@ -162,14 +180,13 @@
     \item \textbf{CD} - Continuous Deployment
     \item \textbf{API} - Application Programming Interface
     \item \textbf{GNU} - GNU's Not Unix
-    \item \textbf{ISO} - 
     \item \textbf{GUI} - Graphical User Interface
     \item \textbf{CLI} - Command Line Interface
     \item \textbf{UI/UX} - User Interface/User Experience
   
   \end{enumerate} 
   
-  \chapter{Zadání práce}
+  \chapter{Úvod}
   Pan Milan Bureš st. (dále jen fotograf nebo zákazník) je amatérský fotograf, který si již před pár lety
   nechal na zakázku vytvořit webovou stránku, na které by prezentoval své fotografie, zachycující
   náhodné okamžiky jeho života. Nicméně postupem času se jeho web i administrační systém stali
@@ -188,21 +205,22 @@
   tzv. Continuous Deploymentu, což přesně kopíruje funkcionality komerční instance projektu určené
   jen pro účely zákazníka.
 
-
   \chapter{Klíčové vlastnosti a požadavky projektu}
   Během vývoje webové prezentace byl velký důraz kladen na to, aby se co nejvíce podobala
   stávající verzi. Ne veškeré elementy webu byly replikovatelné a také jsem se chtěl co nejvíce řídit
   pravidly dobrého webu. Pro porovnání, zde jsou screenshoty jednotlivých webových stránek.
-  
-  \vspace*{0.5cm}
-  \noindent\includegraphics[width=\linewidth]{dmp-bures.png}
-  \begin{center}
-    Popis
-  \end{center}
+
+  \textbf{ROZEPSAT}
+
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{milanburescz.png}
   \begin{center}
-    Popis
+    Původní webová stránka
+  \end{center}
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{dmp-bures.png}
+  \begin{center}
+    Mnou vytvořená webová stránka
   \end{center}
   \vspace*{0.5cm}
 
@@ -336,10 +354,17 @@
 
   [helper functions codeblock]
 
+  \section{Hosting}
+  Hosting je zřízen pomocí Firebase Hosting nejen pro jednoduchou integraci s Github repositářem
+  a předem připravenými CI/CD pipelines, ale také díky jeho ceně. V základním tarifu, jsou všechny služby
+  Firebase (včetně hostingu), zdarma. V rámci tohoto tarifu je však hosting limitován na 10GB úložiště, tedy projekt 
+  nesmí přesáhnout stanovenou kvótu spolu s maximálním trafficem 360MB/den. Samotzřejmostí je avšak SSL certifikát a možnost
+  hostovat více než jednu stránku v rámci projektu.
+
+  Nastavení hostingu je u Firebase velmi jednoduché a díky CLI programu Firebase Tools je vývojář schopen
+  deploynout projekt jedním jednoduchým příkazem, nebo vytvořit CI/CD script, který projekt deployne po pushnutí změn do repozitáře. 
 
   \chapter{Struktura projektu}
-  REWRITE!!!!
-
   Projekt je rozdělen na dvě částí - komerční a školní (DMP). Co se týče části komerční, všechny
   služby okolo hostingu a databází bude zprostředkovávat Firebase, jelikož je to v rámci
   dlouhodobého hlediska nejjednodušší a hlavně nejlevnější řešení. Školní část (DMP) budu zcela
@@ -525,15 +550,24 @@
    díky kterému bude moct uživatel této instance projektu odesílat emaily panu fotografu bez použití email serveru třetí strany. 
    De-facto se jedná o druhou instanci komerčního projektu pro pana fotografa. 
   \section{VPS provideři}
-  
+  Na trhu je mnoho cloud computing providerů, nabízejích virtuální počítače
+  v nejrůznějších početně výkonnostních kategoriích. Mezi nejznámější patří Digital Oceain,
+  Linode, Hostinger nebo Amazon Cloud, kterému jsem se chtěl ale zámerně vyhnout, jelikož se mi vůbec nelíbí 
+  prostředí, ve kterém uživatel své VMs spravuje a jejich ceník je poměrně nepřehledný.
   \begin{center}
-    \begin{tabular}{|l|l|l|l|}
-      \multicolumn{1}{c}{\bfseries Provider} & \multicolumn{1}{c}{\bfseries Cena} & \multicolumn{1}{c}{\bfseries Dalsi prop} & \multicolumn{1}{c}{\bfseries Dalsi prop} \\ \hline
-      Digital Ocean & b & c & d \\ \hline
-      Google Cloud Platform & b & c & d \\ \hline
-      \end{tabular}
+    \noindent\begin{tabular}{|l|l|l|l|l|}
+      \multicolumn{1}{c}{\bfseries Provider} & \multicolumn{1}{c}{\bfseries Cena/měsíc} & \multicolumn{1}{c}{\bfseries Disk} & \multicolumn{1}{c}{\bfseries RAM} & \multicolumn{1}{c}{\bfseries Transfer (\$/GB)} \\ \hline
+      Digital Ocean & \$5 & 25GB & 1GB & \$0.01 \\ \hline
+      Hostinger & \$3.95 & 20GB & 1GB & Do 1TB/mešíc zdarma \\ \hline
+      Linode & \$5 & 25GB & 1GB & Do 1TB/měsíc zdarma \\ \hline
+      A2 & \$8.99 & 150GB & 1GB & Do 2TB/měsíc zdarma \\ \hline
+    \end{tabular}
   \end{center}
-
+  Já jsem se rozhodl pro DigitalOcean, jelikož s nimi mám již předešlou 
+  zkušenost a jejich prostředí pro správu virtuálních počítačů mi ze všech 
+  konkurenčních providerů přijde nejvíce intuitivní a přehledné, spolu s ceníkem, 
+  který neobsahuje žádné lsti. Jejich cena není ze všech uvedených na listu nejlevnější,
+  ale jedná se o kvalitní službu, která je této ceně adekvátní.  
   \section{Konfigurace VPS}
   \subsection{Operační systém GNU/Linux}
   V dnešní době je jako serverový operační systém nejvíce rozšířený GNU/Linux pro jeho
@@ -541,9 +575,7 @@
   1 milionu celosvětově nejpoužívanějších serverů používá Linux jako svůj operační systém a proto
   jsem se i já rozhodl použít Linux a nejen z toho důvodu, že jej dennodenně používám.
   \subsubsection{Debian 11}
-  Jako cloud computing providera pro můj VPS jsem si vybral DigitalOcean, vzhledem k jeho ceně a
-  celkové nabídce se jevil jako nejlepší. Původně jsem na svůj VPS chtěl nainstalovat Arch Linux,
-  jelikož se jedná o Linuxovou distribuci, kterou dennodenně používám, nicméně má jednu velkou
+  Původně jsem na svůj VPS chtěl nainstalovat Arch Linux, jelikož se jedná o Linuxovou distribuci, kterou dennodenně používám, nicméně má jednu velkou
   nevýhodu - nemá vlastní instalátor (i když nyní již existuje instalační script), což mě osobně při
   instalaci v domácích lokálních podmínkách vůbec nevadilo, ale v případě instalování Arche na VPS
   by to znamenalo, že bych musel mít vlastnoručně přizpůsobené ISO, které bych použil k instalaci,
@@ -786,14 +818,11 @@
   \chapter{Seznam použítého softwaru}
     \begin{enumerate}
       \item \textbf{Microsoft Visual Studio Code} - IDE použité k vývoji celého projektu.   
-      \item \textbf{LaTeX} - 
-      \item \textbf{Gimp} - 
-      \item \textbf{Typora} - 
-      \item \textbf{Gimp} -  
-      \item \textbf{Git} -  
-      \item \textbf{Github} -  
-      \item \textbf{Stack Overflow} -  
-      \item \textbf{????} - 
+      \item \textbf{LaTeX} - Markup jazyk pro psaní prací ve velké typografické kvalitě pomocí profesionály předdefinovaných typografických stylů.
+      \item \textbf{Gimp} - Open-source rastrový editor pro editaci grafických objektů.
+      \item \textbf{Typora} - Textový editor pro textové soubory typu Markdown pro jednodušší práci s nimi. 
+      \item \textbf{Git} - Verzovací systém  .
+      \item \textbf{Github} - Server pro ukládání remote git repozitářů.
     \end{enumerate}
   \chapter{Seznam obrázků}
  
