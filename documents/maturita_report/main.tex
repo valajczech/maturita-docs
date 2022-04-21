@@ -32,7 +32,7 @@
 \lstdefinestyle{codeblock}{
      basicstyle=\sffamily\footnotesize\color{Black},
      keywordstyle=\color{bashKeyword},
-     morekeywords={useradd, passwd, usermod, sudo, su, apt-get, wget, sh, git,node, npm, systemctl, cd, ls},
+     morekeywords={useradd, mkdir, ln, passwd, usermod, sudo, su, apt-get, wget, sh, git,node, npm, systemctl, cd, ls},
 }
 
 
@@ -377,8 +377,18 @@
   což se nakonec vyplatilo, protože nyní mám jasný přehled o tom, kde co je a jakým způsobem to funguje.
 
   \section{Komunikace se zákazníkem}
-
+  Komunikace se zákazníkem probíhala primárně a nejvíce prostřednictním mailů,
+  což se mi během vývoje velmi osvědčilo, jelikož všechny informace byly sepsány přehledně
+  na jednom místě a bylo jasné, na čem jsme se, se zákazníkem, domluvili. Proběhlo i pár telefonních hovorů,
+  nicméně postupně jsme od nich opustili, jelikož si za chvíli ani zákazník ani já nebyl jistý, na čem jsme se vlastně domluvili, a proto jsem jej vždycky
+  požádal, aby své požadavky sepisoval do e-mailu a vše bylo přehledné.
+ 
   \section{Organizace úkolů a změn k implementaci}
+  Jakmile jsem dostal od zákazníka nějaký požadavek ať už ve formě e-mailu nebo telefonátu, okamžitě jsem si jej 
+  zapsal a následně přidal do úkolníčku. Těch jsem během vývoje vyzkoušel několik, ale nejvíc se mi osvědčil 
+  Todoist, pro jeho přehlednost a jednoduché ovládaní. Dá se v něm jednoduše nastavit priorita daného úkolu a ty se dají rozdělit
+  do projektu, což je velké plus a uživatel tak nemá na hlavní stránce změť úkolů, které například ani nesouvisejí s projektem, na kterém zrovna pracuje.
+  Jediná nevýhoda, kterou Todoist má, je absence upozornění na dobu nastaveného zpracování úkolu. 
 
   \chapter{Webová prezentace}
   Webová prezentace bude panu fotografovi sloužit jako virtuální galerie fotek, aby lidé, které jeho
@@ -527,7 +537,7 @@
   \section{Konfigurace VPS}
   \subsection{Operační systém GNU/Linux}
   V dnešní době je jako serverový operační systém nejvíce rozšířený GNU/Linux pro jeho
-  minimalističnost a poměrně jednoduchou konfiguraci. Podle hostingtribunal.com až 96% serverů z
+  minimalističnost a poměrně jednoduchou konfiguraci. Podle hostingtribunal.com až 96 procent serverů z
   1 milionu celosvětově nejpoužívanějších serverů používá Linux jako svůj operační systém a proto
   jsem se i já rozhodl použít Linux a nejen z toho důvodu, že jej dennodenně používám.
   \subsubsection{Debian 11}
@@ -537,7 +547,7 @@
   nevýhodu - nemá vlastní instalátor (i když nyní již existuje instalační script), což mě osobně při
   instalaci v domácích lokálních podmínkách vůbec nevadilo, ale v případě instalování Arche na VPS
   by to znamenalo, že bych musel mít vlastnoručně přizpůsobené ISO, které bych použil k instalaci,
-  jelikož DIgitalOcean nenabízí Arch k nainstalování na jejich VPS, které nazývají Droplets.
+  jelikož DigitalOcean nenabízí Arch k nainstalování na jejich VPS, které nazývají Droplets.
   Volba tedy padla na Debian 11, jelikož je v jeho minimalistické instalaci poměrně "čistý" a tudíž
   neobsahuje zbytečné programy a podobně (bloatware). Vzhledem k tomu, že tento "počítač" bude
   sloužit jako server, není potřeba a je až zbytečné instalovat jakékoli desktopové prostředí GUI
@@ -546,7 +556,7 @@
   prostoru a prostředků, a zároveň celá konfigurace systému je proveditelná jen za pomoci
   příkazové řádky CLI (Command Line Interface). Na obrázku pod lze vidět, jak CLI-only Debian v idle
   stavu (stavu, kdy neprovádí žádné operace) zabírá na paměti RAM jen 89MB z dostupných 1GB,
-  tedy necelých 10%.
+  tedy necelých 10 procent.
 
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{VPS.png}
@@ -607,7 +617,7 @@
   Javascript samotný je spustitelný jen v prohlížeči, kde vetšinou plní funkci logického "mozku" webové stránky a provádí logické operace. Díky tomu avšak nemá moc jiného využití, což Node.js mění.
   Node.js je Javascript runtime, díky kterému můžeme spustit Javascriptový kód i mimo prohlížeč, jako například v příkazové řádce jako ostatní scriptovací ale i programovací jazyky, jako například Python nebo Java.
  
-  Umožňuje nám API servery pro webové stránky i webové aplikace. 
+  Umožňuje nám vyvíjet API servery pro webové stránky i webové aplikace. 
   Jelikož je webová prezentace i administační systém serverless, není sám o sobě Node.js potřeba pro správnou funkčnost systému, ale vzhledem k faktu, že
   používím third-party knihovny a pluginy jako například webpack, musím Node.js nainstalovat. Tyto knihovny a další podpůrné programy lze nainstalovat pomocí takzvaného Node Package Manageru (Správce balíčků pro Node.js), neboli NPM.
   \begin{bash}
@@ -639,7 +649,132 @@
   \begin{bash}
     sudo systemctl start nginx
   \end{bash}
-  Nyní po úspěšném zapnutí nginx se VPS choová jako webový server a pokud v prohlížeči přejdu na adresu http://159.65.112.226/ (IP adresa VPS), zobrazí se přivítací obrazovka nginx, což indikuje, že je všechno správně nakonfigurováno a funkční. 
+  Nyní po úspěšném zapnutí nginx se VPS chová jako webový server a pokud v prohlížeči přejdu na adresu http://159.65.112.226/ (IP adresa VPS), zobrazí se přivítací obrazovka nginx, což indikuje, že je všechno správně nakonfigurováno a funkční. 
+  
+  \section{Konfigurace CI/CD}
+  CI (Continuous Integratiaon) a CD (Continuous Delivery) je proces, který umožňuje nepřetržité 
+  dodávání aktuální verze projektu k testování či produkčnímu spuštění. V praxi to znamená,
+  že pokud tým vývojářů provede změnu a uloží ji do remote repositáře
+  (místo pro ukládání zdrojových kódů v cloudu), tato změna se automaticky projeví (deployne)
+  na produční server (server, na kterém je spuštěna aktuální verze projektu a je poskytována
+  uživatelům z venčí).
+  Po té, co provedu změnu v zdrojovém kódu webové prezentace nebo administračního systému a 
+  tuto změnu nahraji pomocí verzovacího systému git do Github repozitáře, je potřeba, aby se 
+  tato změna projevila na produkčním serveru. K tomu využiji shell scripty a Github actions hooky.
+
+  Celá operace probíhá tak, že jakmile vývojář (v tomto případě já) provede změny ve zdrojovém kódu
+  a pushne je do remote repozitáře, Github Action detekují push a spustí interní script napsaný
+  v jazyce YAML, který se pomocí protokolu SSH připojí s předem připravenými přihlašovacími
+  údaji přihlásí a VPS, kde spustí buildAndDeploy script. Ten pomocí gitu pullne změny na lokální úložiště 
+  a spustí build scripty, což znamená, že bundler překompiluje zdrojové soubory projektu tak, aby byly 
+  optimalizované pro použití v produkčním prostředí a aby je dokázal softwarový webový server nabízet uživatelům z vnější sítě.
+  
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{CIDC_visualization.png}
+  \begin{center}
+    Popis
+  \end{center}
+  \vspace*{0.5cm}
+
+  \subsection{Naklonování projektu na lokální úložiště}
+  Jelikož není nejlepším řešením mít inicializováný lokální klon git repozitáře přímo ve složce, ze které 
+  nabízím webové stránky do vnější sítě, vytvořím složku, ve které se bude klon repozitáře nacházet a projekt do ní naklonuji.
+  \begin{bash}
+    mkdir ~/files
+    cd files
+    git clone https://github.com/[repository].git 
+  \end{bash}
+  
+  Nyní mám na systému přesnou kopii projektu a proto vytvořím symlink, který uložím do složky,
+  kterou nginx defaultně používá pro soubory nabízených webových stránek.
+
+  \begin{bash}
+    ln -s ~/files/dmp-bures/website/dist /var/www/dmpbures.cz
+    ln -s ~/files/dmp-bures/dashboard/build /var/www/admin.dmpbures.cz
+  \end{bash}
+
+  \subsection{Nginx konfigurace pro web i administrační systém}
+  Aby byl web i administrační systém přístupný z vnější sítě, je pro každý z těchto "webů"  vytvořit 
+  vlastní konfigurační soubor aby nginx věděl, kde se nacházejí jednotlivé zdrojové soubory a 
+  pod jakou adresou mají být přístupné.
+  Pro web i administrační systém vytvořím konfigurační soubor v adresáři "/etc/nginx/sites-available".
+  
+  \noindent\textbf{/etc/nginx/sites-available/dmpbures.cz}
+  \begin{bash}
+  server {
+    listen 80;
+    listen [::]:80;
+    root /var/www/dmpbures.cz;
+    index index.html;
+    server_name dmpbures.cz www.dmpbures.cz;
+    location / {
+      try_files $uri $uri/ =404;
+    }
+  }
+  \end{bash}
+
+  \noindent\textbf{/etc/nginx/sites-available/admin.dmpbures.cz}
+  \begin{bash}
+  server {
+    listen 81;
+    listen [::]:81;
+    root /var/www/admin.dmpbures.cz;
+    index index.html;
+    server_name admin.dmpbures.cz www.admin.dmpbures.cz;
+    location / {
+      try_files $uri $uri/ =404;
+    }
+  }
+  \end{bash}
+  
+  Struktura konfiguračních souborů je poměrně jednoduchá a jasná: 
+  \begin{enumerate}
+    \item \textbf{listen} - Na jakém portu web poběží. Všimněte si prosím, že se porty webu a CMS liší, aby se navzájem nekryli a uživatel tak mohl přistoupit k oboum webům.
+    \item \textbf{root} - Složka ve které se nachází zdrojové soubory dané stránky
+    \item \textbf{index} - Soubor který slouží jako vstupní HTML dokument (zobrazí se jako první)
+    \item \textbf{server name} - Název serveru, pod jakým je web přístupný. V lokální síti by to bylo pod specifikovaným názvem, ve vnější v případě absence DNS záznamu pod IP VPS.
+    \item \textbf{location} - Udává lokaci dalších souborů, jako například 404 stránky (která se zobrazuje, pokud vyhledávaná stránka neexistuje)
+  \end{enumerate}
+
+  Ve složce /etc/nginx/sites-available se však nachází jen konfigurační soubory webů,
+  které jsou podle názvu složky k dispozici, nicméně nejsou aktivně nabízeny uživatelům z vnější sítě. 
+  Abych toho dosáhl, musím vytvořit kopii konfiguračních souborů ve složce /etc/nginx/sites-enabled, například pomocí symlinků.
+
+  \begin{bash}
+    ln -s /etc/nginx/sites-available/dmpbures.cz 
+    /etc/nginx/sites-enabled/
+    ln -s /etc/nginx/sites-available/admin.dmpbures.cz
+     /etc/nginx/sites-enabled/
+  \end{bash}
+
+  Nyní mám nakonfigurovaný nginx i weby, které má nabízet uživatelům z vnější sítě.
+  Aby vše začalo fungovat, nginx restartuji a ověřím konfiguraci.
+  \begin{bash}
+    nginx -t
+    sudo systemctl restart nginx
+    systemctl status nginx
+  \end{bash}
+
+  Po spuštění prohlížeče a vyhledání adresy http://159.65.112.226 provede prohlížeč
+  požadavek na můj nyní nakonfigurovaný webový server, kde jej nginx zachytí, přečte si adresu, kterou prohlížeč požaduje a 
+  pošle zpět odpovídající html soubor(y), v tomto případě, jelikož je defualtní port 80, webovou prezentací.
+  Kdyby uživatel vyhledal adresu http://159.65.112.226:81, webový server by odpověděl a odesla zpět soubory administračního systému a uživatel by tak mohl editovat 
+  obsah.
+
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{VPS_WEB.png}
+  \begin{center}
+    Popis
+  \end{center}
+  \vspace*{0.5cm}
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{VPS_CMS.png}
+  \begin{center}
+    Popis
+  \end{center}
+  \vspace*{0.5cm}
+
+
   \chapter{Závěr}
   Během vývoje tohoto projektu jsem se naučil mnoho nových věcí, které věřím, že mě v mém
   profesionálním životě posunuly dál, a jsem rád, že jsem si jako dlouhodobou maturitní práci

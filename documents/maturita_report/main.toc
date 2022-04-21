@@ -30,7 +30,10 @@
 \contentsline {subsubsection}{\numberline {8.2.3.2}Git a verzovací systém}{28}{subsubsection.8.2.3.2}%
 \contentsline {subsubsection}{\numberline {8.2.3.3}Node.js a NPM}{28}{subsubsection.8.2.3.3}%
 \contentsline {subsubsection}{\numberline {8.2.3.4}Nginx}{29}{subsubsection.8.2.3.4}%
-\contentsline {chapter}{\numberline {9}Závěr}{31}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Seznam použítého softwaru}{32}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Seznam obrázků}{33}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Citace}{34}{chapter.12}%
+\contentsline {section}{\numberline {8.3}Konfigurace CI/CD}{30}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Naklonování projektu na lokální úložiště}{31}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Nginx konfigurace pro web i administrační systém}{32}{subsection.8.3.2}%
+\contentsline {chapter}{\numberline {9}Závěr}{35}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Seznam použítého softwaru}{36}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Seznam obrázků}{37}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Citace}{38}{chapter.12}%

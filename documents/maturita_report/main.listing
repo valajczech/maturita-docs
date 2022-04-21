@@ -1,2 +1,4 @@
-    sudo systemctl start nginx
+    nginx -t
+    sudo systemctl restart nginx
+    systemctl status nginx
   
