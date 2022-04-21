@@ -130,8 +130,8 @@
   Popisuje použité technologie a postupy ve vývoji spolu s konfigurací
   jednotlivých služeb klíčových ke spuštění celého projektu
   na produkční server a jeho správné a dlouhodobě nezávadné fungování.
-  Cílem práce bylo vytvořit funkční produkt v podobě webu a jeho administračním
-  systémem se všemi aspekty komerčního projektu pro koncového zákazníka, 
+  Cílem práce bylo vytvořit funkční produkt v podobě webu a jeho administračního
+  systému se všemi aspekty komerčního projektu pro koncového zákazníka, 
   který jej bude používat jako své virtuální portfolio.
   
   \section*{Anotation}
@@ -139,7 +139,8 @@
   in a form of virtual gallery and it's content management system. Describes used technologies
   and procedures used in the development as well as configuration of individual services mandatory for
   deployment of the whole project on a production server and it's seamless and longterm functioning.
-
+  The goal of this work was to create a fully functioning product in a form of website and it's content management system 
+  with all aspects of commercial project for a end customer, which will use it as his virtual portfolio.
   \section*{Klíčová slova}
   
   \noindent webová stránka; webová aplikace; administační systém; webová prezentace; webová galerie; vývoj; javascript; react; linux; webhosting
@@ -152,39 +153,77 @@
 
   \chapter{Vymezení pojmů}
   \begin{enumerate}
-    \item \textbf{Content Management System} - Administrační systém, je systém, který umožňuje manipulaci s daty a obsahem webové stránky či webové (ale i desktopové) aplikace. 
-    \item \textbf{Hosting (Webhosting)} - Znamená pronájem prostoru na cizím webovém serveru za účelem spuštění webové stránky či aplikace. 
-    \item \textbf{Continuous Deployment (CI/CD)} - CI - Continuous Intergration a CD - Continuous Delivery je proces, který umožňuje nepřetržité dodávání aktuální verze projektu k testování či produkčnímu spuštění. V praxi to znamená, že pokud tým vývojářů provede změnu a uloží ji do remote repositáře (místo pro ukládání zdrojových kódů v cloudu), tato změna se automaticky projeví (deployne) na produkční server (server, na kterém je spuštěna aktuální verze projektu a je poskytována uživatelům z venčí).
-    \item \textbf{Fetching} - Proces během kterého se "stahují" data z databáze. Tento anglický výraz doslova znamená "přinést".
-    \item \textbf{Backend(Server)} -  Logická část aplikace nebo webu. Požadavky, které uživatel aplikace provede (například přejmenování záznamu v databázi) a data (například všechny záznamy), které si vyžádá, tento server nejdříve zpracuje, případně vytáhne z databáze a pak je odešle uživateli aplikace, která je následně zobrazí, či případně upraví v databázi.
-    \item \textbf{Frontend} - Jedná se o grafické uživatelské rozhraní, v rámci webových aplikací a stránek většinou nejčastěji pomocí značkovacího jazyka HTML, stylovacího jazyka CSS a scriptovacího jazyka Javascript.
-    \item \textbf{Cloud Computing Provider} - Poskytovatel cloudových služeb a infrastruktury (serverů).
-    \item \textbf{Public/Private API} - API je soubor procedur, funkcí a protokolů zajišťující komunikaci mezi dvěma platformami, které si vzájemně vyměňují data (například dvě rozdílné aplikace). K public API má přístup kdokoliv, k private API jen autentifikovaní uživatele například pomocí unikátního ID tokenu.
-    \item \textbf{DDOS útok} - Distributed Denial Of Service - je útok jehož cílem je pomocí sítě mnoha virtuálních počítačů, které v jednu chvíli budou provádět požadavky na daný server, vyřadit tento server z provozu, jelikož nezvládne nápor takového počtu požadavků a zhroutí se.
-    \item \textbf{Framework} - Jedná se o podpůrnou softwarovou strukturu, která zjednodušuje vývoj a organizaci projektu v daném jazyce. Může obsahovat další funkce, podpůrné programy nebo vzory a doporučené postupy ve vývoji.
-    \item \textbf{Knihovna} - Jedná se souhrn procedur a funkcí, často avšak také konstant a datových typů, které usnadňují vývojáři práci tím, že může použít již hotový kód.
-    \item \textbf{Open-source} - Jedná se o projekt s otevřeným zdrojovým kódem, což znamená, že na jeho vývoji se může podílet každý a každý si jej může stáhnout. Popularita open-source projektů v posledních letech velmi roste.
-    \item \textbf{CRUD operace} - Create, read, update, delete (vytvořit, číst, změnit, smazat) jsou čtyři základní operace se záznamem v databázové tabulce.
-    \item \textbf{Shell} - Jedná se o vrstvu operačního systému, která provádí příkazy a spouští programy.
-    \item \textbf{Pagination} - Jedná se o proces rozdělování obsahu na jednotlivé stránky a podstránky. Nejčastěji ji vidíme ve formě čísel na konci webové stránky.
-    \item \textbf{Dropdown menu} -  Jedná se o list záznamů, který se zobrazí až ve chvíli, kdy uživatel nějakým způsobem provede interakci s tímto menu, například kliknutím myši.
+    \item \textbf{Adobe Flash player} - Bývalý počítačový program určený pro prohlížení multimediálního obsahu vytvořeného na zastaralé softwarové platformě Adobe Flash.
     \item \textbf{Algoritmus} - Proces jednotlivých příkazů za účelem splnění zadaného úkolu.
-    \item \textbf{Push notifikace} - Notifikace, které se zobrazují uživateli na mobilním zařízení v notifikační listě nebo na zamykací obrazovce.
+    \item \textbf{API} - API je soubor procedur, funkcí a protokolů zajišťující komunikaci mezi dvěma platformami, které si vzájemně vyměňují data (například dvě rozdílné aplikace). K public API má přístup kdokoliv, k private API jen autentifikovaní uživatele například pomocí unikátního ID tokenu.
+    \item \textbf{Auth} - Autentizace.
+    \item \textbf{Backend} -  Logická část aplikace nebo webu. Požadavky, které uživatel aplikace provede (například přejmenování záznamu v databázi) a data (například všechny záznamy), které si vyžádá, tento server nejdříve zpracuje, případně vytáhne z databáze a pak je odešle uživateli aplikace, která je následně zobrazí, či případně upraví v databázi.
+    \item \textbf{Bundler} - Program, který vygeneruje jeden soubor scriptů (budle) ze všech scriptů používaných v projektu. 
+    \item \textbf{Cache(ing)} - Část paměti uchovávající data, která se použivají v aktuální iteraci programu.
+    \item \textbf{CI/CD pipeline} - Představuje sérii kroků, které je nutné provést pro správné dodání nové verze softwaru.
+    \item \textbf{Cloud Computing Provider} - Poskytovatel cloudových služeb a infrastruktury (serverů).
+    \item \textbf{Cloud Storage} - Úložný prostor v cloudu. Nejčastěji se používá pro ukládání dokumentů a fotografií. Nejznámější je Google Drive.
+    \item \textbf{Commit} - Potvrzení změn a jejich uložení do lokálního repozitáře verzovacího systému, který ji zařadí do historie změn.
+    \item \textbf{Content Management System} - Administrační systém, je systém, který umožňuje manipulaci s daty a obsahem webové stránky či webové (ale i desktopové) aplikace.
+    \item \textbf{Continuous Deployment} - CI - Continuous Intergration a CD - Continuous Delivery je proces, který umožňuje nepřetržité dodávání aktuální verze projektu k testování či produkčnímu spuštění. V praxi to znamená, že pokud tým vývojářů provede změnu a uloží ji do remote repositáře (místo pro ukládání zdrojových kódů v cloudu), tato změna se automaticky projeví (deployne) na produkční server (server, na kterém je spuštěna aktuální verze projektu a je poskytována uživatelům z venčí).
+    \item \textbf{DDOS útok} - Distributed Denial Of Service - je útok jehož cílem je pomocí sítě mnoha virtuálních počítačů, které v jednu chvíli budou provádět požadavky na daný server, vyřadit tento server z provozu, jelikož nezvládne nápor takového počtu požadavků a zhroutí se.
+    \item \textbf{Deploy} - Nasazení softwaru je v informatice souhrn všech činností, které připravují softwarový systém k použití.
+    \item \textbf{Developer Experience} - Popisuje jednoduchost a intuitivu, kterou vývojáři zažívají během práce s určitým softwarem nebo nástrojem.
+    \item \textbf{Devops} - Složenina anglických výrazů Development a Operations. Je to přístup k vývoji software, který zdůrazňuje komunikaci, spolupráci a integraci mezi vývojářem a odborníky na informační technologie z provozu. 
+    \item \textbf{Element (HTML dokumentu)} - HTML dokument se skládá z elementů, jako jsou například \emph{div} a nebo \emph{section}.
+    \item \textbf{Endpoint} - Koncový bod. 
+    \item \textbf{Fetching} - Proces během kterého se "stahují" data z databáze. Tento anglický výraz doslova znamená "přinést".
+    \item \textbf{Framework} - Jedná se o podpůrnou softwarovou strukturu, která zjednodušuje vývoj a organizaci projektu v daném jazyce. Může obsahovat další funkce, podpůrné programy nebo vzory a doporučené postupy ve vývoji.
+    \item \textbf{Frontend} - Jedná se o grafické uživatelské rozhraní, v rámci webových aplikací a stránek většinou nejčastěji pomocí značkovacího jazyka HTML, stylovacího jazyka CSS a scriptovacího jazyka Javascript.
+    \item \textbf{Hosting(Webhosting)} - Znamená pronájem prostoru na cizím webovém serveru za účelem spuštění webové stránky či aplikace. 
+    \item \textbf{Knihovna} - Jedná se souhrn procedur a funkcí, často avšak také konstant a datových typů, které usnadňují vývojáři práci tím, že může použít již hotový kód.
+    \item \textbf{Load Balancer} - Softwarový (ale existuje i hardwarový) nástroj k vyvažování náporu na část infrastruktury projekt, například webového serveru.
+    \item \textbf{Open Source}- Jedná se o projekt s otevřeným zdrojovým kódem, což znamená, že na jeho vývoji se může podílet každý a každý si jej může stáhnout. Popularita open-source projektů v posledních letech velmi roste.
+    \item \textbf{Out-of-the-box} - Předem připraveno. 
+    \item \textbf{Pagination} - Jedná se o proces rozdělování obsahu na jednotlivé stránky a podstránky. Nejčastěji ji vidíme ve formě čísel na konci webové stránky.
+    \item \textbf{Performance} - Výkon, výkonnost označuje měřítko pro určování funkčnosti webové stránky nebo aplikace.
+    \item \textbf{Plugin} - Modul pro daný softwaru.
+    \item \textbf{Preprocessor} - Počítačový program, který zpracovává vstup tak, aby jej dálé mohl zpracovat jiný prohram.
+    \item \textbf{Pull} - Příkaz verzovacího systému git, díky kterému se stáhnou nejnovější změny z \emph{remote repozitáře} do \emph{lokálního repozitáře}.
+    \item \textbf{Push} - Příkaz verzovacího systému git, díky kterému se nahrají nejnovější změny z \emph{lokálního repozitáře} do \emph{remote repozitáře}.
+    \item \textbf{Push Notifikace}  - Notifikace, které se zobrazují uživateli na mobilním zařízení v notifikační listě nebo na zamykací obrazovce.
+    \item \textbf{Repozitář} - Softwarový repozitář je v informatice označení pro místo, odkud mohou být staženy a nainstalovány softwarové balíčky.
+    \item \textbf{Route} - Označení pro \emph{endpoint} (podstránku) React aplikace.
+    \item \textbf{Routing} - Proces, pomocí kterého React aplikace rozhodne, na který \emph{endpoint} má uživatele poslat.
+    \item \textbf{Runtime} - Běhové prostředí je v informatice skupina software, určená na podporu realizace počítačových programů napsaných v některém z programovacích jazyků.
+    \item \textbf{Screenshot} - Snímek obrazovky.
+    \item \textbf{Script} - Soubor kroků a příkazů. které \emph{shell} po spuštění \emph{scriptu} vykoná.
+    \item \textbf{Shell} - Jedná se o vrstvu operačního systému, která provádí příkazy a spouští programy.
+    \item \textbf{Single Page Application} - Jednostránková aplikace je webová aplikace nebo webová stránka, která komunikuje s uživatelem dynamickým přepisováním aktuální webové stránky novými daty z webového serveru namísto výchozí metody webového prohlížeče načítání celých nových stránek.
+    \item \textbf{Symlink} - Symbolický link odkazuje na jiný soubor nebo adresář. Odkaz je realizován jako malý speciální soubor, který obsahuje absolutní nebo relativní cestu k cílovému souboru.
   \end{enumerate}
+
+  \clearpage
   \section{Seznam použítých zkratek}
   \begin{enumerate}
+    \item \textbf{API} - Application programming interface
+    \item \textbf{CD} - Continuous deployment
+    \item \textbf{CI} - Continuous integratiaon
+    \item \textbf{CLI} - Command line interface
+    \item \textbf{CMS} - Content management system
+    \item \textbf{CSS} - Cascading style sheet
+    \item \textbf{DDOS} - Distributed denial of service
     \item \textbf{DMP} - Dlouhodobá maturitní práce
-    \item \textbf{CMS} - Content Management System
-    \item \textbf{VPS} - Virtual Private Server
-    \item \textbf{CI} - Continuous Integratiaon
-    \item \textbf{CD} - Continuous Deployment
-    \item \textbf{API} - Application Programming Interface
-    \item \textbf{GNU} - GNU's Not Unix
-    \item \textbf{GUI} - Graphical User Interface
-    \item \textbf{CLI} - Command Line Interface
-    \item \textbf{UI/UX} - User Interface/User Experience
+    \item \textbf{DOM} - Document object model
+    \item \textbf{GNU} - GNU's not unix
+    \item \textbf{GUI} - Graphical user interface
+    \item \textbf{HTML} - Hypertext markup language
+    \item \textbf{ISO} - Archive of contents
+    \item \textbf{SSH} - Secure shell
+    \item \textbf{SSL}  - Secure socket layers
+    \item \textbf{UI/UX} - User interface/User experience
+    \item \textbf{URL} - Uniform resource locator
+    \item \textbf{VM} - Virtual machine
+    \item \textbf{VPS} - Virtual private server
+    \item \textbf{YAML} - YAML ain't markup language
   
-  \end{enumerate} 
+  \end{enumerate}
+
   
   \chapter{Úvod}
   Pan Milan Bureš st. (dále jen fotograf nebo zákazník) je amatérský fotograf, který si již před pár lety
@@ -209,8 +248,6 @@
   Během vývoje webové prezentace byl velký důraz kladen na to, aby se co nejvíce podobala
   stávající verzi. Ne veškeré elementy webu byly replikovatelné a také jsem se chtěl co nejvíce řídit
   pravidly dobrého webu. Pro porovnání, zde jsou screenshoty jednotlivých webových stránek.
-
-  \textbf{ROZEPSAT}
 
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{milanburescz.png}
@@ -291,7 +328,13 @@
   vývoje pocítil výrazný rozdíl v jednoduchosti vývoje oproti samotného vanilla Javascriptu (bez
   použití frameworku či knihovny.)
 
-  [react codeblock]
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{reactCodeblock.png}
+  \begin{center}
+    Popis
+  \end{center}
+  \vspace*{0.5cm}
+
   \subsubsection{SASS/SCSS}
   SASS je preprocessor stylovacího jazyka CSS, což znamená, že styly psané v SCSS (sassy css)
   zpracuje a překompiluje to klasického CSS.
@@ -300,11 +343,21 @@
   hierarchicky do sebe a pod sebe, což zlepšuje přehlednost jednotlivých stylů a například tzv.
   mixins, což jsou vlastně bloky stylů, které se dají použít vícekrát, což snižuje počet stylů, které musí
   vývojář napsat.
+  
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{cssCodeblock.png}
+  \begin{center}
+    Popis
+  \end{center}
 
-  [css codeblock]
+  \vspace*{0.5cm}\vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{scssCodeblock.png}
+  \begin{center}
+    Popis
+  \end{center}
+  \vspace*{0.5cm}
 
-  [scss codeblock]
-  \section{Backend}
+  \subsection{Backend}
   \subsubsection{Node.js}
   Node.js je tzv. runtime pro Javascript určený k vytváření vysoce škálovatelných backend aplikací a
   webových serverů. Toto má společné např. s jazykem PHP, který má stejné zaměření. JavaScript se
@@ -315,8 +368,7 @@
   Javascriptu. 
   \subsubsection{Shell scripty}
   Shell scripty jsou sada příkazů, které po spuštění zpracovává a provede shell. Význam těchto
-  scriptů v rámci tohoto projektu jsou CI/CD a DevOps Operace, které jsou detailněji popsány v bodu
-  ????
+  scriptů v rámci tohoto projektu jsou CI/CD a DevOps Operace, které jsou detailněji popsány v bodu 8.3.
   \subsubsection{Firebase}
   Firebase je cloud computing provider nabízející služby jako hosting webových stránek, hosting
   databází, ale mnoho dalších jako je například machine learning, které však pro mě vzhledem k
@@ -352,7 +404,12 @@
   obrázku/fotky. Nicméně kdyby si to zákazník přál, jsem schopen implementovat i nahrávání
   souborů jiných, než fotografií.
 
-  [helper functions codeblock]
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{imagesHelperCodeblock.png}
+  \begin{center}
+    Popis
+  \end{center}
+  \vspace*{0.5cm}
 
   \section{Hosting}
   Hosting je zřízen pomocí Firebase Hosting nejen pro jednoduchou integraci s Github repositářem
@@ -365,9 +422,9 @@
   deploynout projekt jedním jednoduchým příkazem, nebo vytvořit CI/CD script, který projekt deployne po pushnutí změn do repozitáře. 
 
   \chapter{Struktura projektu}
-  Projekt je rozdělen na dvě částí - komerční a školní (DMP). Co se týče části komerční, všechny
+  Projekt je rozdělen na dvě částí - komerční a marturitní (DMP). Co se týče části komerční, všechny
   služby okolo hostingu a databází bude zprostředkovávat Firebase, jelikož je to v rámci
-  dlouhodobého hlediska nejjednodušší a hlavně nejlevnější řešení. Školní část (DMP) budu zcela
+  dlouhodobého hlediska nejjednodušší a hlavně nejlevnější řešení. Maturitní část (DMP) budu zcela
   spravovat já, tudíž mám pronajatý vlastní server, na kterém budu zprostředkovávat hosting a
   backend služby, nicméně všechna data budou poskytována a požadována z databází komerční
   části.
@@ -378,8 +435,22 @@
     Popis
   \end{center}
   \vspace*{0.5cm}
-
-
+  
+  \section{Komerční část}
+  Jedná se o část projektu, která ke svému fungování využívá kompletně služeb Firebase 
+  a jde o ostrou verzi systému, která bude přístupná pod doménou zákazníka pro uživatele z vnější sítě, kteří budou se stránkou moci 
+  interagovat a prohlížet si fotografie, které pan fotograf nahraje a uloží.
+  \section{Maturitní část}
+  Ačkoliv je tato část spuštěná na mém privátním virtuálním serveru, ani tak není zcela
+  nezávislá na Firebase, jelikož využívá data z Firebase Firestore, což by se dalo vyřešit
+  například spuštěním instance No-SQL databáze MongoDB, která funguje na podobném principu jako 
+  Firestore a fotografie, které by uživatel této instance nahrál na server, by se jednoduše ukládaly
+  do předem připraveného adresáře na lokálním úložišti, nicméně pro jednodušší nastavování a z důvodu nutnosti
+  přepracovat celý kód jak webu tak i CMS, jsem se rozhodl zůstat u Firebase co se dat týče. 
+  Témeř veškeré funkcionality, které obsahuje komerční instance projektu, obsahuje i tato maturitní část, 
+  jediná věc co chybí je SSL certifikát a vlastní doména. Ikdyž by bylo poměrně jednoduché obojí přidat,
+  domény jsou placené a já bohužel žádnou doménu zatím nevlastním.
+ 
   \chapter{Průběh vývoje}
   Vývoj obou systémů, který započal dubnu roku 2021 jsem se snažil provádět co nejvíce agilně. To znamená,
   že se odehrával v takzvaných sprintech, kde jeden sprint je časový úsek pro implementaci a vyladění požadované změny.
@@ -455,14 +526,6 @@
     Popis
   \end{center}
   \vspace*{0.5cm}
-
-  Dropdown menu s odkazy na existující alba. Jelikož jsou alba dynamickými prvky v databázi, musel
-  jsem vymyslet způsob, jakým budu vytvářet podstránky jednotlivých alb, nemohl jsem totiž ručně
-  pro každé album vytvořit podstránku pokaždé, co ji uživatel administračního systému vytvoří.
-  Implementoval jsem tedy algoritmus, který na základě id obsažené v URL linku alba vytáhne z
-  databáze správný záznam o albu právě pomocí daného id.
-
-  [show-correct-ulbum logic codeblock]
  
   Stránku "Výstavy", která obsahuje seznam všech výstav, na kterých pan fotograf kdy vystavoval
   své fotografie. Samozřejmě se jedná o editovatelný text.
@@ -471,7 +534,7 @@
   V poslední řadě "Kontakt", kde lze najít veškeré kontaktní možnosti. Formulář, který podstránka
   obsahuje, bude pomocí Firebase Functions posílat email a push notifikaci panu fotografovi vždy,
   když mu někdo napíše email, aby se nikdy nestalo, že nebude vědět o tom, že mu někdo psal.
- 
+
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{contact.png}
   \begin{center}
@@ -483,6 +546,26 @@
   pomocí frameworku Gatsby.js, který slouží pro generování statických HTML stránek za použítí
   React.js, což bude mít za následek nejen mnohonásobně jednodušší budoucí vývoj, ale také
   rychlejší načítací časy.
+
+  \section{Vanilla Javascript routing}
+  Jelikož jsou alba dynamickými prvky a v databázi se jejich počet mění, bylo nutné implementovat systém, který
+  umožní, aby si uživatel mohl zobrazit všechny vytvořená alba. Nejhorším řešením, které by mohlo být,
+  je pokaždé, uživatel administračního systému vytvoří nové album, ručně vytvořit nový html dokument, který bude 
+  obsahovat galerii s obsahem dané stránky. Implementoval jsem tedy algoritmus, který na základě id obsažené v URL linku alba vytáhne z
+  databáze správný záznam o albu právě pomocí daného id.
+
+  \vspace*{0.5cm}
+  \noindent\includegraphics[width=\linewidth]{vanillaJsRoutingCodeblock.png}
+  \begin{center}
+    Popis
+  \end{center}
+  \vspace*{0.5cm}
+
+  Funguje to tak, že uživatel webové stránky klikne menu na odkaz alba, který obsahuje id alba, na které chce uživatel přejít.
+  Tyto data, název a odkaz na album, jsou stáhnuty z databáze ve chvíli, kdy uživatel přijde na stránku poprvé.
+  Po kliknutí je přesměrován na podstránku \emph{collections}, která podle \emph{id} obsaženého v \emph{URL linku}
+  zjistí přesně které album chce uživatel vidět a jeho data \emph{vyrenderuje} v podobě galerie do dokumentu.
+  Ve své podstatě se jedná o podobný princip, jakým funguje React Router.
 
   \chapter{Administrační systém}
  
@@ -542,6 +625,32 @@
     Popis
   \end{center}
   \vspace*{0.5cm}
+
+  \section{Využití frameworku React.js}
+  Administrační systém byl v raných fázích vývoje vyvíjen jen za pomocí čistého Javascriptu a
+  jelikož tento přístup postupem času a komplexnosti projektu začal snižovat přehlednost a zvyšovat 
+  celkovou jednoduchost vývoje, celá aplikace byla přepsána a přefaktorována za pomocí 
+  frameworku React.js, ačkoliv například algoritmy pro ukládání nebo získávání dat z databáze se nezměnily.
+  
+  Díky tomu, ikdyž se vzhledem k použítí frameworku snížila performance celého systému, například celkové
+  načitací časy ze zmenšíly, jelikož pokud uživatel změnil endpoint, celá aplikace se nemusela načítat znovu, jelikož
+  z principu fungování Reactu již načtená celá byla a tudíž to nebylo potřeba. Dále také načítací časy obrázků zaznamenaly pokles,
+  jelikož React pracuje velmi dobře s rychle měnícími se daty a například stahování, cacheování a následné zobrazování obrázků umí 
+  rychleji, než uměla moje vanilla implementace.
+  
+  \subsection{React.js vs Vanilla Javascript}
+  Není tajemstvím, že co se celkové performance týče, bude React vždy pomalejší, než čistý vanilla Javascript, už jen 
+  z toho důvodu, že je React svým způsobem nadstavbou nad Javascriptem a během runtime provádí mnohem více operací, než čistý Javascript.
+  Nicméně co se tzv. developer experience týče, vyvíjení webových aplikací ale i webů je díky Reactu mnohem jednodušší, než jen
+  za pomoci čistého Javascriptu, jelikož celý kód je rozdělen do takzvaných komponentů, které fungují jako stavební kameny aplikace a jednoduše se 
+  do ní vkládají a vývojář má tak přesný a jasný přehled o tom, kde co je a jak to funguje. 
+
+  Dalším základním rozdílem je způsob, jakým React oproti projektu používající jen vanilla Javascript funguje.
+  Projekt s vanilla Javascriptem je rozdělen na více HTML dokumentů (například podle počtu podstránek) a každý z nich má svůj vlastní 
+  Javscript soubor, který se spustí ve chvíli, kdy se daný HTML dokument načte.
+  Nicméně React na druhou stranu má jen jediný HTML dokument, který obsahuje jeden Javascriptový soubor a podle toho,
+  který endpoint uživatel vyžádá (navštíví) se obsah HTML dokumentu změní na danou komponentu typu route. Na tomto principu funguje React Router,
+  díky kterému se obsah stránky nemusí načítat pokaždé, kdy uživatel danou stránku vyžádá, nýbrž se jednoduše "překreslí".
  
   \chapter{VPS - Virtual Private Server}
    Pro potřeby práce jsem si pronajal a nakonfiguroval vlastní server, který kopíruje veškeré funkcionality
