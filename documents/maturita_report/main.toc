@@ -15,7 +15,7 @@
 \contentsline {subsubsection}{\numberline {3.2.2.3}Firebase}{18}{subsubsection.3.2.2.3}%
 \contentsline {section}{\numberline {3.3}Hosting}{20}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Struktura projektu}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Komerční část}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Komerční část}{22}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Maturitní část}{22}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Průběh vývoje}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Komunikace se zákazníkem}{24}{section.5.1}%
@@ -37,9 +37,11 @@
 \contentsline {subsubsection}{\numberline {8.2.3.3}Node.js a NPM}{38}{subsubsection.8.2.3.3}%
 \contentsline {subsubsection}{\numberline {8.2.3.4}Nginx}{39}{subsubsection.8.2.3.4}%
 \contentsline {section}{\numberline {8.3}Konfigurace CI/CD}{39}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Naklonování projektu na lokální úložiště}{40}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Nginx konfigurace pro web i administrační systém}{41}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.1}Naklonování projektu na lokální úložiště}{41}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Nginx konfigurace pro web i administrační systém}{42}{subsection.8.3.2}%
 \contentsline {chapter}{\numberline {9}Závěr}{45}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Seznam použítého softwaru}{46}{chapter.10}%
 \contentsline {chapter}{\numberline {11}Seznam obrázků}{47}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Citace}{48}{chapter.12}%
+\contentsline {chapter}{\numberline {12}Seznam tabulek}{48}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Seznam použité literatury}{49}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Citace}{50}{chapter.14}%
