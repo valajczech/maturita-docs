@@ -22,7 +22,6 @@
 \usepackage{listings}
 \usepackage{tcolorbox}
 
-
 \tcbuselibrary{listings,skins}  
 
 \hypersetup{
@@ -39,7 +38,6 @@
 
 \definecolor{bashBackcolor}{RGB}{237, 237, 237}
 \definecolor{bashKeyword}{RGB}{35, 83, 173}
-
 % Styles
 \lstdefinestyle{codeblock}{
      basicstyle=\sffamily\footnotesize\color{Black},
@@ -50,8 +48,21 @@
 
 \usepackage{titlesec}
 \titleformat{\chapter}
-  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+  {\normalfont\LARGE\bfseries\color{pojblue}}{\thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{pojblue}}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{pojblue}}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{pojblue}}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
 
 \graphicspath{ {./img/} }
 \setlength{\parindent}{2em}
@@ -71,6 +82,7 @@
 \renewcommand*\listfigurename{}
 \renewcommand{\figurename}{Obr.}
 \renewcommand\refname{}
+\renewcommand{\contentsname}{\color{pojblue}Obsah}
 
 \newtcblisting{bash}{
       enhanced,                             %%% needed for shadow
@@ -99,11 +111,13 @@
 		\Huge\textbf{MATURITNÍ ZKOUŠKA}
     \color{black}
     \vspace*{1cm} \\
-		\large \emph{PRAKTICKÁ ZKOUŠKA Z ODBORNÝCH PŘEDMĚTŮ}
+		\large\emph{\textbf{PRAKTICKÁ ZKOUŠKA Z ODBORNÝCH PŘEDMĚTŮ}}
 		\vspace*{1cm} \\
-		\Large Téma č.3 \\
-		\vspace*{1cm}
-		\Large Fotografický web a kompletní administrační systém \\
+    \color{pojblue}
+		\Large \textbf{Téma č.3} \\
+    \vspace*{1cm}
+		\Large \textbf{Fotografický web a kompletní administrační systém} \\
+    \color{black}
 		\vfill
 		\normalsize
 	\end{center}
@@ -115,26 +129,28 @@
 	\end{tabularx}
 \end{titlepage}
 
-\section*{Prohlášení autora}
+  \color{pojblue}
+  \section*{Prohlášení autora}
+  \color{black}
+  \vfill
   „Prohlašuji, že jsem tuto práci vypracoval samostatně a použil jsem literárních pramenů a informací, které cituji a uvádím v seznamu použité literatury a dalších zdrojů informací.“ \\
 	\vspace*{0.5cm} \\
 	\renewcommand{\arraystretch}{2}
 	\begin{tabularx}{\textwidth}{l@{\hskip 0.75cm}X@{\hskip 1.5cm}X@{\hskip 0.75cm}l}
 		Ve Frýdku-Místku, dne: & \dotfill & \dotfill & podpis \\
 	\end{tabularx}
+  
   \clearpage
-
   \chapter*{Zadání práce}
   \begin{enumerate}
     \item Návrh a koncepce webu - shrnutí požadavků zákazníka a návrh řešení
-    \item Použité platoformy, technologie a software
+    \item Použité platformy, technologie a software
     \item Vývoj webové stránky
     \item Vývoj administračního systému
     \item Hosting
     \item Vytvoření vlastního webového serveru a virtuálního webu na bázi virtuálního počítače
   \end{enumerate}
   \clearpage
-
 
   \section*{Anotace}
   Tato práce se zabývá průběhem vývoje webové stránky pro amatérského 
@@ -145,10 +161,9 @@
   Cílem práce bylo vytvořit funkční produkt v podobě webu a jeho administračního
   systému se všemi aspekty komerčního projektu pro koncového zákazníka, 
   který jej bude používat jako své virtuální portfolio.
-  
   \section*{Anotation}
   This thesis focuses on the development process of a website for an amateur photographer
-  in a form of virtual gallery and it's content management system. Describes used technologies
+  in a form of virtual gallery and it's content management system. Describes technologies
   and procedures used in the development as well as configuration of individual services mandatory for
   deployment of the whole project on a production server and it's seamless and longterm functioning.
   The goal of this work was to create a fully functioning product in a form of website and it's content management system 
@@ -163,7 +178,7 @@
   \clearpage
   
   \tableofcontents
-  
+ 
   \clearpage
 
   \chapter{Vymezení pojmů}
@@ -352,17 +367,16 @@
     Obr.4 - Ukázka vytvoření jednoduché komponenty pomocí \emph{frameworku} React.js \\
     (Zdroj: Autor práce)
   \end{center}
-  \vspace*{0.5cm}
 
   \subsubsection{SASS/SCSS}
   \textbf{SASS} je \emph{preprocessor} stylovacího jazyka \emph{CSS}, což znamená, že styly psané v SCSS (sassy css)
   zpracuje a překompiluje do klasického \emph{CSS}.
   
   \textbf{SCSS} je další z mnoha stylovacích jazyků a jedná se o přímé rozšíření klasického \emph{CSS}, přidává
-  například proměnné a nebo nesting, což znamená, že jednotlivé selektory můžeme psát přímo
-  hierarchicky do sebe a pod sebe, což zlepšuje přehlednost jednotlivých stylů a například tzv.
-  mixins, což jsou vlastně bloky stylů, které se dají použít vícekrát, což snižuje počet stylů, které musí
-  vývojář napsat.
+  například proměnné a nebo nesting. To znamená, že jednotlivé selektory můžeme psát přímo
+  hierarchicky do sebe a pod sebe, díky čemuž jsou jednotlivé bloky stylů přehlednější. Dále tzv.
+  mixins, což jsou vlastně bloky stylů, které se dají použít vícekrát, a díky tomu
+  nemusí vývojář psát enormní počet nových stylů.
   
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{cssCodeblock.png}
@@ -389,7 +403,7 @@
   dnes Node.js velmi oblíbený pro tvorbu tzv. \emph{API} serverů pro klientské single page aplikace rovněž v
   Javascriptu. 
   \subsubsection{Shell scripty}
-  \emph{Shell} scripty jsou sada příkazů, které po spuštění zpracovává a provede \emph{shell}. Význam těchto
+  \emph{Shell} \emph{scripty} jsou sada příkazů, které po spuštění zpracovává a provede \emph{shell}. Význam těchto
   scriptů v rámci tohoto projektu jsou \emph{CI/CD} a \emph{DevOps} Operace, které jsou detailněji popsány v bodu 8.3.
   \subsubsection{Firebase}
   Firebase je \emph{cloud computing provider} nabízející služby jako \emph{hosting} webových stránek, \emph{hosting}
@@ -437,7 +451,7 @@
 
   \section{Hosting}
   \emph{Hosting} je zřízen pomocí Firebase Hosting nejen pro jednoduchou integraci s Github \emph{repozitářem}
-  a předem připravenými \emph{CI/CD} \emph{pipeline}, ale také díky jeho ceně. V základním tarifu, jsou všechny služby
+  a předem připravenými \emph{CI/CD} \emph{pipelines}, ale také díky jeho ceně. V základním tarifu, jsou všechny služby
   Firebase (včetně \emph{hostingu}), zdarma. V rámci tohoto tarifu je však \emph{hosting} limitován na 10GB úložiště, tedy projekt 
   nesmí přesáhnout stanovenou kvótu spolu s maximálním trafficem 360MB/den. Samozřejmostí je však \emph{SSL} certifikát a možnost
   \emph{hostovat} více než jednu stránku v rámci projektu.
@@ -463,7 +477,7 @@
   \vspace*{0.5cm}
   
   \section{Komerční část}
-  Jedná se o část projektu, která ke svému fungování využívá kompletně služeb Firebas.
+  Jedná se o část projektu, která ke svému fungování využívá kompletně služeb Firebase.
   Jde o ostrou verzi systému, která bude přístupná pod doménou zákazníka pro uživatele z vnější sítě, kteří budou moci se stránkou 
   interagovat a prohlížet si fotografie, které pan fotograf nahraje a uloží.
   \section{Maturitní část}
@@ -474,15 +488,15 @@
   do předem připraveného adresáře na lokálním úložišti. Nicméně pro jednodušší nastavování a z důvodu nutnosti
   přepracovat celý kód jak webu tak i \emph{CMS}, jsem se rozhodl zůstat u Firebase co se dat týče. 
   Téměř veškeré funkcionality, které obsahuje komerční instance projektu, obsahuje i tato maturitní část, 
-  jediná věc co chybí, je \emph{SSL} certifikát a vlastní doména. Ikdyž by bylo poměrně jednoduché obojí přidat,
+  jediná věc co chybí, je \emph{SSL} certifikát a vlastní doména. I když by bylo poměrně jednoduché obojí přidat,
   domény jsou placené a já bohužel žádnou doménu zatím nevlastním.
  
   \chapter{Průběh vývoje}
   Vývoj obou systémů, který započal v dubnu roku 2021 jsem se snažil provádět co nejvíce agilně. To znamená,
   že se odehrával v takzvaných sprintech, kde jeden sprint je časový úsek pro implementaci a vyladění požadované změny.
   Nicméně častokrát se stalo, že jsme spolu se zákazníkem označili právě probíhající sprint za dokončený (já jsem implementoval změnu a zákazník ji označil za odpovídající), ale za pár dní mi 
-  přišel email s tím, že se zákazníkovi tato změna nakonec nelíbí a chtěl by ji změnit, nicméně ikdyž se jedná o lehce kontraproduktivní chování, 
-  je to zcela běžné i během vývoje mnohem větších a komplexnějších projektů a musí se s tím počítat, proto je dobré, že je celý projekt modulární a není až tak složité implementovat změnu.
+  přišel email s tím, že se zákazníkovi tato změna nakonec nelíbí a chtěl by ji změnit. Nicméně i když se jedná o lehce kontraproduktivní chování, 
+  je to zcela běžné i během vývoje mnohem větších a komplexnějších projektů a musí se s tím počítat. Proto je dobré, že je celý projekt modulární a není až tak složité implementovat změnu.
   
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{agile.png}
@@ -493,7 +507,7 @@
   \vspace*{0.5cm}
  
   Vývoj obou systémů začal nejprve ve vanilla Javascriptu, bez použítí jakéhokoliv \emph{frameworku}, což
-  se jevilo jako nejjednodušší řešení, jelikož jsem tehdy neuměl používat žádný \emph{framework}. Čistý Javascript, 
+  se jevilo jako nejjednodušší řešení, jelikož jsem tehdy neuměl používat žádný \emph{framework}. Čistý Javascript 
   je pro projekt, jako je webová stránka více než
   dostačující, nicméně vzhledem k modulárnosti a mnoha dalším vylepšením, které \emph{framework} jako například Gatsby.js přidává,
   bych jej v případě, že bych měl vytvořit webovou stránku, použil.
@@ -548,7 +562,7 @@
   jedná o výběr fotografií, které pan fotograf nedávno vyfotil a rozhodl se, že je bude sdílet. Při
   vývoji této podstránky jsem musel vymyslet systém, jakým budu fotografie na webu zobrazovat,
   jelikož si zákazník přál, aby místo galerie, která je použita u všech ostatních alb, byla použita
-  tabulka s náhledy fotografií. Abych tohoto docílil se správnou pagination, musel jsem pole
+  tabulka s náhledy fotografií. Abych tohoto docílil se správnou \emph{pagination}, musel jsem pole
   se všemi fotografiemi rozdělit na části po 6 fotografiích a poté je v těchto částech zobrazit na
   webu. Po kliknutí na náhled fotografie se však otevře galerie, jako u všech ostatních alb.
   
@@ -560,13 +574,13 @@
   \end{center}
   \vspace*{0.5cm}
  
-  Stránku "Výstavy", která obsahuje seznam všech výstav, na kterých pan fotograf kdy vystavoval
+  Dále stránku "Výstavy", která obsahuje seznam všech výstav, na kterých pan fotograf kdy vystavoval
   své fotografie. Samozřejmě se jedná o editovatelný text.
   
   "Biografie" popisuje dosavadní život pana fotografa společně s jeho fotografií.
   
   V poslední řadě "Kontakt", kde lze najít veškeré kontaktní možnosti. Formulář, který podstránka
-  obsahuje, bude pomocí Firebase Functions posílat email a push notifikaci panu fotografovi vždy,
+  obsahuje, bude pomocí Firebase Functions posílat email a \emph{push notifikaci} panu fotografovi vždy,
   když mu někdo napíše email.
 
   \vspace*{0.5cm}
@@ -630,13 +644,13 @@
   Prozatím celý autentifikační systém funguje za pomocí emailu a hesla, jelikož web spravuje jeden
   člověk a není potřeba, abych implementoval například autentifikaci pomocí Google či jiného již
   existujícího účtu.
-  Celá aplikace je "obalená" v \emph{auth elemementu}, který po úspěšném přihlášení (ověří se, zda
+  Celá aplikace je "obalená"\space v \emph{auth elemementu}, který po úspěšném přihlášení (ověří se, zda
   uživatel existuje na Firebase \emph{Auth} serveru) uchovává informace o přihlášeném uživateli a pokud
   záznam o tomto uživateli existuje, \emph{auth element} jej pustí dál, jinak bude přesměrován zpět na
   přihlašovací obrazovku.
   Administrační systém obsahuje veškeré nástroje k tomu, aby uživatel mohl manipulovat s
   fotografiemi a alby, které nahraje a vytvoří. Po nahrání jedné či více fotografií se tyto fotografie
-  objeví na podstránce "Fotografie" v přehledném seznamu. Kliknutím na jednotlivé fotografie se
+  objeví na podstránce "Fotografie"\space v přehledném seznamu. Kliknutím na jednotlivé fotografie se
   uživatel dostane na stránku pro manipulaci s jednotlivou fotografií, kde ji může přejmenovat,
   přidat popis, přiřadit do alba nebo ji z alba odstranit, a nebo fotografii odstranit úplně. Také lze
   vidět metadata fotografie, jako například kdy byla nahrána, či případně kolikrát ji návštěvníci
@@ -668,9 +682,9 @@
 
   \section{Využití frameworku React.js}
   Administrační systém byl v raných fázích vývoje vyvíjen jen za pomocí čistého Javascriptu a
-  jelikož tento přístup postupem času a komplexnosti projektu začal snižovat přehlednost a zvyšovat 
-  celkovou jednoduchost vývoje, celá aplikace byla přepsána a přefaktorována za pomocí 
-  \emph{frameworku} React.js, ačkoliv například \emph{algoritmy} pro ukládání nebo získávání dat z databáze se nezměnily.
+  jelikož tento přístup postupem času a komplexnosti projektu začal snižovat přehlednost i 
+  celkovou jednoduchost vývoje, celá aplikace byla přepsána a refaktorována za pomocí 
+  \emph{frameworku} React.js, ale například \emph{algoritmy} pro ukládání nebo získávání dat z databáze se nezměnily.
 
   Díky tomu se celkové načítací časy zmenšily, protože pokud například uživatel změnil \emph{endpoint}, celá aplikace se 
   nemusela načítat znovu, jelikož z principu fungování Reactu již načtená celá byla a tudíž to nebylo potřeba. 
@@ -678,7 +692,7 @@
   daty a například stahování, \emph{cacheování} a následné zobrazování obrázků umí rychleji, než uměla moje vanilla implementace.
   
   \subsection{React.js vs Vanilla Javascript}
-  Není tajemstvím, že co se celkové performance týče, bude React vždy pomalejší, než čistý vanilla Javascript, už jen 
+  Není tajemstvím, že co se celkové \emph{performance} týče, bude React vždy pomalejší, než čistý vanilla Javascript, už jen 
   z toho důvodu, že je React svým způsobem nadstavbou nad Javascriptem a během \emph{runtime} provádí mnohem více operací, než čistý Javascript.
   Nicméně co se tzv. \emph{developer experience} týče, vyvíjení webových aplikací ale i webů je díky Reactu mnohem jednodušší, než jen
   za pomoci čistého Javascriptu, jelikož celý kód je rozdělen do takzvaných komponent, které fungují jako stavební kameny aplikace a jednoduše se 
@@ -700,7 +714,7 @@
    De-facto se jedná o druhou instanci komerčního projektu pro pana fotografa. 
   \section{VPS provideři}
   Na trhu je mnoho \emph{cloud computing providerů}, nabízejích virtuální počítače
-  v nejrůznějších početně výkonnostních kategoriích. Mezi nejznámější patří Digital Oceain,
+  v nejrůznějších početně výkonnostních kategoriích. Mezi nejznámější patří Digital Ocean,
   Linode, Hostinger nebo Amazon Cloud, kterému jsem se chtěl ale zámerně vyhnout, jelikož se mi vůbec nelíbí 
   prostředí, ve kterém uživatel své \emph{VMs} spravuje a jejich ceník je poměrně nepřehledný.
   \begin{center}
@@ -752,7 +766,7 @@
 
   \subsection{Vytvoření developer uživatele}
   Tento uživatel bude využíván jako správce celého vývojového i produkčního prostředí a bude mít skoro stejná
-  práva jako root (adminiustrátor systému). \\
+  práva jako root (administrátor systému). \\
   \begin{bash}
     useradd -m developer
     passwd developer
@@ -795,7 +809,7 @@
   Jednoduše řečeno jedná se o software, který sleduje změny v souborech, aby pak měl uživatel/vývojář 
   větší přehled o tom, jaké změny provedl. V současnosti se git nejvíce používá pro kolaboraci mezi vývojáři na \emph{open-source}
    ale i \emph{closed-source} projektech, jelikož git samotný je \emph{open-source}, tudíž jej může kdokoliv využívat na svém interním serveru.
-  Vzhledem k tomu, že z \emph{VPS}nebudu pushovat žádné změny do remote repositáře, nebylo potřeba provádět žádnou pokročilejší konfiguraci 
+  Vzhledem k tomu, že z \emph{VPS} nebudu pushovat žádné změny do remote repositáře, nebylo potřeba provádět žádnou pokročilejší konfiguraci 
   a git stačí jen nainstalovat.
   \begin{bash}
     sudo apt-get install git
@@ -809,7 +823,7 @@
   Javascript samotný je spustitelný jen v prohlížeči, kde vetšinou plní funkci logického "mozku"\space webové stránky a provádí logické operace. 
   Díky tomu avšak nemá moc jiného využití, což Node.js mění.
   Node.js je Javascript \emph{runtime}, díky kterému můžeme spustit Javascriptový 
-  kód i mimo prohlížeč, jako například v příkazové řádce jako ostatní scriptovací ale i programovací jazyky,jako například Python nebo Java.
+  kód i mimo prohlížeč, jako například v příkazové řádce, podobně jako ostatní scriptovací ale i programovací jazyky,jako například Python nebo Java.
  
   Umožňuje nám vyvíjet \emph{API} servery pro webové stránky i webové aplikace. 
   Jelikož je webová prezentace i administační systém serverless, není sám o sobě Node.js potřeba pro správnou funkčnost systému,
@@ -851,11 +865,11 @@
    zobrazí se přivítací obrazovka nginx, což indikuje, že je všechno správně nakonfigurováno a funkční. 
   
   \section{Konfigurace CI/CD}
-  \emph{CI} (Continuous Integratiaon) a \emph{CD} (Continuous Delivery) je proces, který umožňuje nepřetržité 
+  \emph{CI} (Continuous Integration) a \emph{CD} (Continuous Delivery) je proces, který umožňuje nepřetržité 
   dodávání aktuální verze projektu k testování či produkčnímu spuštění. V praxi to znamená,
   že pokud tým vývojářů provede změnu a uloží ji do \emph{remote repozitáře}
   (místo pro ukládání zdrojových kódů v \emph{cloudu}), tato změna se automaticky projeví (\emph{deployne})
-  na produční server (server, na kterém je spuštěna aktuální verze projektu a je poskytována
+  na produkční server (server, na kterém je spuštěna aktuální verze projektu a je poskytována
   uživatelům z venčí).
   Poté, co provedu změnu v zdrojovém kódu webové prezentace nebo administračního systému a 
   tuto změnu nahraji pomocí verzovacího systému git do Github \emph{repozitáře}, je potřeba, aby se 
@@ -872,7 +886,7 @@
   Celá operace probíhá tak, že jakmile vývojář (v tomto případě já) provede změny ve zdrojovém kódu
   a \emph{pushne} je do \emph{remote repozitáře}, Github Action detekují \emph{push} a spustí interní \emph{script} napsaný
   v jazyce \emph{YAML}, který se pomocí protokolu \emph{SSH} připojí s předem připravenými přihlašovacími
-  údaji přihlásí a \emph{VPS}, kde spustí buildAndDeploy \emph{script}. Ten pomocí gitu \emph{pullne} změny na lokální úložiště 
+  údaji  na \emph{VPS}, kde spustí buildAndDeploy \emph{script}. Ten pomocí gitu \emph{pullne} změny na lokální úložiště 
   a spustí \emph{build scripty}, což znamená, že \emph{bundler} překompiluje zdrojové soubory projektu tak, aby byly 
   optimalizované pro použití v produkčním prostředí a aby je dokázal softwarový webový server nabízet uživatelům z vnější sítě.
   
@@ -902,7 +916,7 @@
   \end{bash}
 
   \subsection{Nginx konfigurace pro web i administrační systém}
-  Aby byl web i administrační systém přístupný z vnější sítě, je pro každý z těchto "webů"  vytvořit 
+  Aby byl web i administrační systém přístupný z vnější sítě, je pro každý z těchto "webů"\space nutné  vytvořit 
   vlastní konfigurační soubor aby nginx věděl, kde se nacházejí jednotlivé zdrojové soubory a 
   pod jakou adresou mají být přístupné.
   Pro web i administrační systém vytvořím konfigurační soubor v adresáři "/etc/nginx/sites-available".
@@ -937,7 +951,7 @@
   
   Struktura konfiguračních souborů je poměrně jednoduchá a jasná: 
   \begin{enumerate}
-    \item \textbf{listen} - Na jakém portu web poběží. Všimněte si prosím, že se porty webu a CMS liší, aby se navzájem nekryli a uživatel tak mohl přistoupit k oboum webům.
+    \item \textbf{listen} - Na jakém portu web poběží. Všimněte si prosím, že se porty webu a CMS liší, aby se navzájem nekryly a uživatel tak mohl přistoupit k oboum webům.
     \item \textbf{root} - Složka ve které se nachází zdrojové soubory dané stránky
     \item \textbf{index} - Soubor který slouží jako vstupní \emph{HTML} dokument (zobrazí se jako první)
     \item \textbf{server name} - Název serveru, pod jakým je web přístupný. V lokální síti by to bylo pod specifikovaným názvem, ve vnější v případě absence DNS záznamu pod IP VPS.
