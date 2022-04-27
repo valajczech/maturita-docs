@@ -1,46 +1,46 @@
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{\numberline {1}Vymezení pojmů}{6}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Seznam použitých zkratek}{10}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Úvod}{11}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Klíčové vlastnosti a požadavky projektu}{12}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Serverless architektura}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Moderní technologie}{14}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Frontend a UI/UX}{14}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}HTML,CSS a Javascript}{15}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.2}React.js}{15}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {3.2.1.3}SASS/SCSS}{16}{subsubsection.3.2.1.3}%
-\contentsline {subsection}{\numberline {3.2.2}Backend}{17}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}Node.js}{17}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}Shell scripty}{18}{subsubsection.3.2.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.3}Firebase}{18}{subsubsection.3.2.2.3}%
-\contentsline {section}{\numberline {3.3}Hosting}{20}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Struktura projektu}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Komerční část}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Maturitní část}{22}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Průběh vývoje}{23}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Komunikace se zákazníkem}{24}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Organizace úkolů a změn k implementaci}{24}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Webová prezentace}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Vanilla Javascript routing}{27}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Administrační systém}{29}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Využití frameworku React.js}{32}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}React.js vs Vanilla Javascript}{32}{subsection.7.1.1}%
-\contentsline {chapter}{\numberline {8}VPS - Virtual Private Server}{33}{chapter.8}%
-\contentsline {section}{\numberline {8.1}VPS provideři}{33}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Konfigurace VPS}{34}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Operační systém GNU/Linux}{34}{subsection.8.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.1.1}Debian 11}{34}{subsubsection.8.2.1.1}%
-\contentsline {subsection}{\numberline {8.2.2}Vytvoření developer uživatele}{35}{subsection.8.2.2}%
-\contentsline {subsection}{\numberline {8.2.3}Konfigurace prostředí}{36}{subsection.8.2.3}%
-\contentsline {subsubsection}{\numberline {8.2.3.1}Shell}{36}{subsubsection.8.2.3.1}%
-\contentsline {subsubsection}{\numberline {8.2.3.2}Git a verzovací systém}{36}{subsubsection.8.2.3.2}%
-\contentsline {subsubsection}{\numberline {8.2.3.3}Node.js a NPM}{37}{subsubsection.8.2.3.3}%
-\contentsline {subsubsection}{\numberline {8.2.3.4}Nginx}{38}{subsubsection.8.2.3.4}%
-\contentsline {section}{\numberline {8.3}Konfigurace CI/CD}{38}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Naklonování projektu na lokální úložiště}{40}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Nginx konfigurace pro web i administrační systém}{41}{subsection.8.3.2}%
-\contentsline {chapter}{\numberline {9}Seznam obrázků}{45}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Seznam tabulek}{46}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Seznam použitého softwaru}{47}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Seznam použité literatury}{48}{chapter.12}%
-\contentsline {chapter}{\numberline {13}Citace}{50}{chapter.13}%
+\contentsline {chapter}{\numberline {1}Vymezení pojmů}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Seznam použitých zkratek}{11}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Úvod}{12}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Klíčové vlastnosti a požadavky projektu}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Serverless architektura}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Moderní technologie}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Frontend a UI/UX}{15}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}HTML,CSS a Javascript}{16}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}React.js}{16}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}SASS/SCSS}{17}{subsubsection.3.2.1.3}%
+\contentsline {subsection}{\numberline {3.2.2}Backend}{18}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Node.js}{18}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Shell scripty}{19}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}Firebase}{19}{subsubsection.3.2.2.3}%
+\contentsline {section}{\numberline {3.3}Hosting}{21}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Struktura projektu}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Komerční část}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Maturitní část}{23}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Průběh vývoje}{24}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Komunikace se zákazníkem}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Organizace úkolů a změn k implementaci}{25}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Webová prezentace}{26}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Vanilla Javascript routing}{28}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Administrační systém}{30}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Využití frameworku React.js}{33}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}React.js vs Vanilla Javascript}{33}{subsection.7.1.1}%
+\contentsline {chapter}{\numberline {8}VPS - Virtual Private Server}{34}{chapter.8}%
+\contentsline {section}{\numberline {8.1}VPS provideři}{34}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Konfigurace VPS}{35}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Operační systém GNU/Linux}{35}{subsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.1.1}Debian 11}{35}{subsubsection.8.2.1.1}%
+\contentsline {subsection}{\numberline {8.2.2}Vytvoření developer uživatele}{36}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Konfigurace prostředí}{37}{subsection.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.1}Shell}{37}{subsubsection.8.2.3.1}%
+\contentsline {subsubsection}{\numberline {8.2.3.2}Git a verzovací systém}{37}{subsubsection.8.2.3.2}%
+\contentsline {subsubsection}{\numberline {8.2.3.3}Node.js a NPM}{38}{subsubsection.8.2.3.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.4}Nginx}{39}{subsubsection.8.2.3.4}%
+\contentsline {section}{\numberline {8.3}Konfigurace CI/CD}{39}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Naklonování projektu na lokální úložiště}{41}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Nginx konfigurace pro web i administrační systém}{42}{subsection.8.3.2}%
+\contentsline {chapter}{\numberline {9}Seznam obrázků}{46}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Seznam tabulek}{47}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Seznam použitého softwaru}{48}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Seznam použité literatury}{49}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Citace}{51}{chapter.13}%

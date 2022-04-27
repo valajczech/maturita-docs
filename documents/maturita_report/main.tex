@@ -153,22 +153,20 @@
   \clearpage
 
   \section*{Anotace}
-  Tato práce se zabývá průběhem vývoje webové stránky pro amatérského 
-  fotografa ve formě virtuální galerie a jejího administračního systému.
-  Popisuje použité technologie a postupy ve vývoji spolu s konfigurací
-  jednotlivých služeb klíčových ke spuštění celého projektu
-  na produkční server a jeho správné a dlouhodobě nezávadné fungování.
-  Cílem práce bylo vytvořit funkční produkt v podobě webu a jeho administračního
-  systému se všemi aspekty komerčního projektu pro koncového zákazníka, 
-  který jej bude používat jako své virtuální portfolio.
+  Tato práce se zabývá průběhem vývoje kompletní webové stránky včetně administračního systému,
+  se všemi aspekty komerčního projektu pro zákazníka, který ji bude využívat jako své virtuální portfolio 
+  fotografií. Popisuje použité technologie a postupy ve vývoji spolu s konfigurací jednotlivých služeb klíčových ke spuštění celého projektu
+  na produkční server a jeho správné a dlouhodobě nezávadné fungování. Dále obsahuje rozbory jednotlivých zprostředkovatelů privátních serverů,
+  nebo také rozdíly mezi technologiemi použitých k vývoji. Práce je z větší části psána teoreticky a popisuje princip fungování webu a administračního systému,
+  nicméně v rámci maturitní části je v osmé kapitole popsána detailní konfigurace virtuálního privátního serveru
+  za účelem spuštění celého projektu pomocí softwarového webového serveru Nginx tak, aby byl přístupný z Internetu.
   \section*{Anotation}
-  This thesis focuses on the development process of a website for an amateur photographer
-  in a form of virtual gallery and it's content management system. Describes technologies
-  and procedures used in the development as well as configuration of individual services mandatory for
-  deployment of the whole project on a production server and it's seamless and longterm functioning.
-  The goal of this work was to create a fully functioning product in a form of website and it's content management system 
-  with all aspects of commercial project for a end customer, which will use it as his virtual portfolio.
-  
+  This thesis focuses on the development process of a web page, as well as its content management system with all aspects of a commercial project
+  for a customer, who will use it as his virtual photography portfolio. It describes technologies and procedures used during the development 
+  as well as the configuration of individual services mandatory for deploying the project to the production server and its long-term seamless functioning. Furthermore, the thesis contains 
+  an analysis of individual cloud computing providers and also differences between technologies used during the development process. For the most parts, the thesis is written theoretically 
+  and describes how the web page and the content management system works, however, for the needs of the maturita part, in the eighth chapter, there is a detailed configuration of the virtual private server, in order to deploy the project 
+  using software webserver Nginx in a way so its accessible from the Internet.
   \section*{Klíčová slova}
   \noindent webová stránka; webová aplikace; administační systém; webová prezentace; webová galerie; vývoj; javascript; react; linux; webhosting
   
@@ -202,7 +200,7 @@
     \item \textbf{Devops} - Složenina anglických výrazů Development a Operations. Je to přístup k vývoji software, který zdůrazňuje komunikaci, spolupráci a integraci mezi vývojářem a odborníky na informační technologie z provozu. 
     \item \textbf{Element (\emph{HTML} dokumentu)} - \emph{HTML} dokument se skládá z elementů, jako jsou například \emph{div} a nebo \emph{section}.
     \item \textbf{Endpoint} - Koncový bod. 
-    \item \textbf{Fetching} - Proces během kterého se "stahují" data z databáze. Tento anglický výraz doslova znamená "přinést".
+    \item \textbf{Fetching} - Proces během kterého se ``stahují`` data z databáze. Tento anglický výraz doslova znamená ``přinést``.
     \item \textbf{Framework} - Jedná se o podpůrnou softwarovou strukturu, která zjednodušuje vývoj a organizaci projektu v daném jazyce. Může obsahovat další funkce, podpůrné programy nebo vzory a doporučené postupy ve vývoji.
     \item \textbf{Frontend} - Jedná se o grafické uživatelské rozhraní, v rámci webových aplikací a stránek většinou nejčastěji pomocí značkovacího jazyka \emph{HTML}, stylovacího jazyka \emph{CSS} a scriptovacího jazyka Javascript.
     \item \textbf{Hosting (Webhosting)} - Znamená pronájem prostoru na cizím webovém serveru za účelem spuštění webové stránky či aplikace. 
@@ -304,7 +302,7 @@
   administračního systému.
   Serverless architektura má mnoho výhod, jedna z těch hlavních a největších je samozřejmě
   absence potřeby konfigurovat a později spravovat vlastní server, jelikož to kompletně
-  zprostředkovává daný \emph{cloud computing provider}, ale také celková cena "pronájmu" , jelikož ta se
+  zprostředkovává daný \emph{cloud computing provider}, ale také celková cena ``pronájmu`` , jelikož ta se
   počítá podle počtu požadavků na danou službu (napříkad fetchování dat z databáze). Další je například bezpečnost,
   jelikož jsou tyto architektury zabezpečené například proti \emph{DDOS útokům}, ale také celková
   škálovatelnost celého systému. \emph{Cloud computing provider} automaticky škáluje prostředky (úložistě,
@@ -359,7 +357,7 @@
   rozdělí na jednotlivé komponenty, což má za následek jednoduchý a přehledný zdrojový kód a
   celou strukturu projektu, což je potřebné u velkého a komplexního projektu a já sám jsem během
   vývoje pocítil výrazný rozdíl v jednoduchosti vývoje oproti samotného vanilla Javascriptu (bez
-  použití \emph{frameworku} či \emph{knihovny}.)
+  použití \emph{frameworku}).
 
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{reactCodeblock.png}
@@ -531,10 +529,10 @@
 
   \chapter{Webová prezentace}
   Webová prezentace bude panu fotografovi sloužit jako virtuální galerie fotek, aby lidé, které jeho
-  tvorba zajímá, měli všechny jeho fotografie na "dosah ruky" a vzhledem k tehdejší koronavirové
+  tvorba zajímá, měli všechny jeho fotografie na ``dosah ruky`` a vzhledem k tehdejší koronavirové
   situaci je více než vhodné, aby nemuseli chodit přímo na výstavu.
   Samotná webová prezentace obsahuje přesně to, co obsahovala ta stávající, tedy, hlavní stránku,
-  na které je jen galerie z alba "Hlavní", jelikož se jedná o fotografie, které se panu fotografovi líbí
+  na které je jen galerie z alba ``Hlavní``, jelikož se jedná o fotografie, které se panu fotografovi líbí
   nejvíce a o kterých si myslí, že by mohly oslovit nejvíce lidí. Po kliknutí na náhledovou fotografii se
   spustí galerie, která avšak nedovoluje rozkliknout informační box s více informacemi o dané
   fotografii.
@@ -551,11 +549,11 @@
   \end{center}
   \vspace*{0.5cm}
 
-  Dále stránku "Úvodem", sloužící jako předmluva pro celý web, který má simulovat umělecké
+  Dále stránku ``Úvodem``, sloužící jako předmluva pro celý web, který má simulovat umělecké
   dílo spolu s jeho uměleckými fotografiemi. Tento text je samozřejmě editovatelný v
   administračním systému.
   
-  Odkaz na stránku alba "Nejnovější". 
+  Odkaz na stránku alba ``Nejnovější``. 
   Jak by se mohlo z názvu zdát, nejedná se o album s fotografiemi, které byly nahrány nedávno, ale 
   o fotografie, které byly nedávno vyfoceny. Ostatní alba totiž mohou obsahovat i fotografie, které byly
   vyfoceny před rokem 2000. To znamená, že se
@@ -574,12 +572,12 @@
   \end{center}
   \vspace*{0.5cm}
  
-  Dále stránku "Výstavy", která obsahuje seznam všech výstav, na kterých pan fotograf kdy vystavoval
+  Dále stránku ``Výstavy``, která obsahuje seznam všech výstav, na kterých pan fotograf kdy vystavoval
   své fotografie. Samozřejmě se jedná o editovatelný text.
   
-  "Biografie" popisuje dosavadní život pana fotografa společně s jeho fotografií.
+  ``Biografie``\space popisuje dosavadní život pana fotografa společně s jeho fotografií.
   
-  V poslední řadě "Kontakt", kde lze najít veškeré kontaktní možnosti. Formulář, který podstránka
+  V poslední řadě ``Kontakt``, kde lze najít veškeré kontaktní možnosti. Formulář, který podstránka
   obsahuje, bude pomocí Firebase Functions posílat email a \emph{push notifikaci} panu fotografovi vždy,
   když mu někdo napíše email.
 
@@ -644,17 +642,17 @@
   Prozatím celý autentifikační systém funguje za pomocí emailu a hesla, jelikož web spravuje jeden
   člověk a není potřeba, abych implementoval například autentifikaci pomocí Google či jiného již
   existujícího účtu.
-  Celá aplikace je "obalená"\space v \emph{auth elemementu}, který po úspěšném přihlášení (ověří se, zda
+  Celá aplikace je ``obalená``\space v \emph{auth elemementu}, který po úspěšném přihlášení (ověří se, zda
   uživatel existuje na Firebase \emph{Auth} serveru) uchovává informace o přihlášeném uživateli a pokud
   záznam o tomto uživateli existuje, \emph{auth element} jej pustí dál, jinak bude přesměrován zpět na
   přihlašovací obrazovku.
   Administrační systém obsahuje veškeré nástroje k tomu, aby uživatel mohl manipulovat s
   fotografiemi a alby, které nahraje a vytvoří. Po nahrání jedné či více fotografií se tyto fotografie
-  objeví na podstránce "Fotografie"\space v přehledném seznamu. Kliknutím na jednotlivé fotografie se
+  objeví na podstránce ``Fotografie``\space v přehledném seznamu. Kliknutím na jednotlivé fotografie se
   uživatel dostane na stránku pro manipulaci s jednotlivou fotografií, kde ji může přejmenovat,
   přidat popis, přiřadit do alba nebo ji z alba odstranit, a nebo fotografii odstranit úplně. Také lze
   vidět metadata fotografie, jako například kdy byla nahrána, či případně kolikrát ji návštěvníci
-  webové prezentace udělili "lajk".
+  webové prezentace udělili ``lajk``.
 
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{allPhotos.png}
@@ -704,11 +702,11 @@
   Nicméně React na druhou stranu má jen jediný \emph{HTML} dokument, který obsahuje jeden Javascriptový soubor a podle toho,
   který \emph{endpoint} uživatel vyžádá (navštíví) se obsah \emph{HTML} dokumentu změní na danou komponentu typu \emph{route}.
   Na tomto principu funguje React Router, díky kterému se obsah stránky nemusí načítat pokaždé, kdy uživatel danou stránku vyžádá,
-  nýbrž se jednoduše "překreslí".
+  nýbrž se jednoduše ``překreslí``.
  
   \chapter{VPS - Virtual Private Server}
    Pro potřeby práce jsem si pronajal a nakonfiguroval vlastní server, který kopíruje veškeré funkcionality
-   Firebase. Zajišťuje \emph{hosting} pomocí softwarového webového serveru nginx, díky čemuž si na adrese \emph{VPS} může
+   Firebase. Zajišťuje \emph{hosting} pomocí softwarového webového serveru Nginx, díky čemuž si na adrese \emph{VPS} může
    zobrazit webovou stránku i modifikovat její obsah přes administrační systém. Kromě toho na \emph{VPS} běží i Node.js \emph{backend server},
    díky kterému bude moct uživatel této instance projektu odesílat emaily panu fotografu bez použití email serveru třetí strany. 
    De-facto se jedná o druhou instanci komerčního projektu pro pana fotografa. 
@@ -746,8 +744,8 @@
   instalaci v domácích lokálních podmínkách vůbec nevadilo, ale v případě instalování Arche na \emph{VPS}
   by to znamenalo, že bych musel mít vlastnoručně přizpůsobené \emph{ISO}, které bych použil k instalaci,
   jelikož DigitalOcean nenabízí Arch k nainstalování na jejich \emph{VPS}, které nazývají Droplets.
-  Volba tedy padla na Debian 11, jelikož je v jeho minimalistické instalaci poměrně "čistý" \space a tudíž
-  neobsahuje zbytečné programy a podobně (bloatware). Vzhledem k tomu, že tento "počítač" \space bude
+  Volba tedy padla na Debian 11, jelikož je v jeho minimalistické instalaci poměrně ``čistý`` \space a tudíž
+  neobsahuje zbytečné programy a podobně (bloatware). Vzhledem k tomu, že tento ``počítač`` \space bude
   sloužit jako server, není potřeba a je až zbytečné instalovat jakékoli desktopové prostředí \emph{GUI},
   jelikož by to mělo za následek zvýšení požadavků na výpočetní
   výkon serveru, což je nežádoucí, jelikož chceme, aby operační systém serveru zabíral co nejméně
@@ -820,7 +818,7 @@
     git config --global credential.helper store
   \end{bash}
   \subsubsection{Node.js a NPM}
-  Javascript samotný je spustitelný jen v prohlížeči, kde vetšinou plní funkci logického "mozku"\space webové stránky a provádí logické operace. 
+  Javascript samotný je spustitelný jen v prohlížeči, kde vetšinou plní funkci logického ``mozku``\space webové stránky a provádí logické operace. 
   Díky tomu avšak nemá moc jiného využití, což Node.js mění.
   Node.js je Javascript \emph{runtime}, díky kterému můžeme spustit Javascriptový 
   kód i mimo prohlížeč, jako například v příkazové řádce, podobně jako ostatní scriptovací ale i programovací jazyky,jako například Python nebo Java.
@@ -861,8 +859,8 @@
   \begin{bash}
     sudo systemctl start nginx
   \end{bash}
-  Nyní po úspěšném zapnutí nginx se \emph{VPS} chová jako webový server a pokud v prohlížeči přejdu na adresu http://159.65.112.226/ (\emph{IP} adresa \emph{VPS}),
-   zobrazí se přivítací obrazovka nginx, což indikuje, že je všechno správně nakonfigurováno a funkční. 
+  Nyní po úspěšném zapnutí Nginx se \emph{VPS} chová jako webový server a pokud v prohlížeči přejdu na adresu http://159.65.112.226/ (\emph{IP} adresa \emph{VPS}),
+   zobrazí se přivítací obrazovka Nginx, což indikuje, že je všechno správně nakonfigurováno a funkční. 
   
   \section{Konfigurace CI/CD}
   \emph{CI} (Continuous Integration) a \emph{CD} (Continuous Delivery) je proces, který umožňuje nepřetržité 
@@ -908,7 +906,7 @@
   \end{bash}
   
   Nyní mám na systému přesnou kopii projektu a proto vytvořím \emph{symlink}, který uložím do složky,
-  kterou nginx defaultně používá pro soubory nabízených webových stránek.
+  kterou Nginx defaultně používá pro soubory nabízených webových stránek.
 
   \begin{bash}
     ln -s ~/files/dmp-bures/website/dist /var/www/dmpbures.cz
@@ -916,10 +914,10 @@
   \end{bash}
 
   \subsection{Nginx konfigurace pro web i administrační systém}
-  Aby byl web i administrační systém přístupný z vnější sítě, je pro každý z těchto "webů"\space nutné  vytvořit 
-  vlastní konfigurační soubor aby nginx věděl, kde se nacházejí jednotlivé zdrojové soubory a 
+  Aby byl web i administrační systém přístupný z vnější sítě, je pro každý z těchto ``webů``\space nutné  vytvořit 
+  vlastní konfigurační soubor aby Nginx věděl, kde se nacházejí jednotlivé zdrojové soubory a 
   pod jakou adresou mají být přístupné.
-  Pro web i administrační systém vytvořím konfigurační soubor v adresáři "/etc/nginx/sites-available".
+  Pro web i administrační systém vytvořím konfigurační soubor v adresáři ``/etc/nginx/sites-available``.
   
   \noindent\textbf{/etc/nginx/sites-available/dmpbures.cz}
   \begin{bash}
@@ -969,8 +967,8 @@
      /etc/nginx/sites-enabled/
   \end{bash}
 
-  Nyní mám nakonfigurovaný nginx i weby, které má nabízet uživatelům z vnější sítě.
-  Aby vše začalo fungovat, nginx restartuji a ověřím konfiguraci.
+  Nyní mám nakonfigurovaný Nginx i weby, které má nabízet uživatelům z vnější sítě.
+  Aby vše začalo fungovat, Nginx restartuji a ověřím konfiguraci.
   \begin{bash}
     nginx -t
     sudo systemctl restart nginx
@@ -978,7 +976,7 @@
   \end{bash}
 
   Po spuštění prohlížeče a vyhledání adresy http://159.65.112.226 provede prohlížeč
-  požadavek na můj nyní nakonfigurovaný webový server, kde jej nginx zachytí, přečte si adresu, kterou prohlížeč požaduje a 
+  požadavek na můj nyní nakonfigurovaný webový server, kde jej Nginx zachytí, přečte si adresu, kterou prohlížeč požaduje a 
   pošle zpět odpovídající \emph{HTML} soubor(y), v tomto případě, jelikož je defaultní port 80, webovou prezentací.
   Kdyby uživatel vyhledal adresu http://159.65.112.226:81, webový server by odeslal zpět soubory administračního systému a uživatel by tak mohl editovat 
   obsah.
@@ -1007,8 +1005,8 @@
   vanilla Javascriptu a tím pádem bych se mohl soustředit na důležitější věci, než je opětovné
   vyvíjení systému, který jsem již jednou vytvořil.
   \section*{Summary}
-  During the development proccess of this project, I have learnt a lots of new things,
-  which I firmly believe, have leveled up my proffesional skills  and I am very glad for this opportunity to have
+  During the development process of this project, I have learned a lot of new things,
+  which I firmly believe, have leveled up my professional skills  and I am very glad for this opportunity to have
   this kind of project as my maturita project. However, I am a little bit sad, that I did not start
   using React.js sooner, because the development would have been a lot easier and I would not have lost time 
   developing content management system using vanilla Javascript and thus I would have more time for a lot more important 
