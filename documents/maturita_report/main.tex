@@ -358,7 +358,7 @@
   celou strukturu projektu, což je potřebné u velkého a komplexního projektu a já sám jsem během
   vývoje pocítil výrazný rozdíl v jednoduchosti vývoje oproti samotného vanilla Javascriptu (bez
   použití \emph{frameworku}).
-
+  \vfill
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{reactCodeblock.png}
   \begin{center}
@@ -373,9 +373,8 @@
   \textbf{SCSS} je další z mnoha stylovacích jazyků a jedná se o přímé rozšíření klasického \emph{CSS}, přidává
   například proměnné a nebo nesting. To znamená, že jednotlivé selektory můžeme psát přímo
   hierarchicky do sebe a pod sebe, díky čemuž jsou jednotlivé bloky stylů přehlednější. Dále tzv.
-  mixins, což jsou vlastně bloky stylů, které se dají použít vícekrát, a díky tomu
-  nemusí vývojář psát enormní počet nových stylů.
-  
+  mixins, což jsou vlastně bloky stylů, které se dají použít vícekrát.
+  \vfill
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{cssCodeblock.png}
   \begin{center}
@@ -383,13 +382,12 @@
     (Zdroj: Autor práce)
   \end{center}
 
-  \vspace*{0.5cm}\vspace*{0.5cm}
+  \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{scssCodeblock.png}
   \begin{center}
     Obr.6 -  Ukázka stylování v SCSS  \\
     (Zdroj: Autor práce)
   \end{center}
-  \vspace*{0.5cm}
 
   \subsection{Backend}
   \subsubsection{Node.js}
@@ -416,7 +414,6 @@
     Obr.7 -  Nástěnka projektu ve Firebase Console \\
     (Zdroj: Autor práce)
   \end{center}
-  \vspace*{0.5cm}
   Firestore je NO-SQL databáze, což znamená, že jednotlivé záznamy uchovává v datovém typu
   JSON, což je key-value datový typ, který slouží pro jednoduché popisování parametru daného
   předmětu, například člověka. Pro mé účely (ukládání záznamů o jednotlivých albech a fotografiích)
@@ -431,7 +428,6 @@
     Obr.8 - Firebase Firestore záznamy jednotlivých alb \\
     (Zdroj: Autor práce)
   \end{center}
-  \vspace*{0.5cm}
 
   \emph{Cloud Storage} je \emph{cloudové} úložiště pro všechny typy souborů. Vzhledem k tomu, že by měl pan
   fotograf nahrávat jen fotografie, ve \emph{scriptu}, který řídí nahrávání nových fotografií, je
@@ -580,7 +576,7 @@
   V poslední řadě ``Kontakt``, kde lze najít veškeré kontaktní možnosti. Formulář, který podstránka
   obsahuje, bude pomocí Firebase Functions posílat email a \emph{push notifikaci} panu fotografovi vždy,
   když mu někdo napíše email.
-
+  \vfill
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{contact.png}
   \begin{center}
@@ -600,6 +596,7 @@
   je pokaždé, když uživatel administračního systému vytvoří nové album, ručně vytvořit nový \emph{HTML} dokument, který bude 
   obsahovat galerii s obsahem daného alba. Implementoval jsem tedy \emph{algoritmus}, který na základě \emph{id} obsažené v \emph{URL linku} alba vytáhne z
   databáze správný záznam o albu právě pomocí daného \emph{id}.
+  \vfill
 
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{vanillaJsRoutingCodeblock.png}
@@ -751,9 +748,9 @@
   výkon serveru, což je nežádoucí, jelikož chceme, aby operační systém serveru zabíral co nejméně
   prostoru a prostředků, a zároveň celá konfigurace systému je proveditelná jen za pomoci
   příkazové řádky \emph{CLI}. Na obrázku pod lze vidět, že \emph{CLI-only} (bez \emph{GUI}) Debian v idle
-  stavu (stavu, kdy neprovádí žádné operace) zabírá na paměti RAM jen 89MB z dostupných 1GB,
+  stavu (stavu, kdy neprovádí žádné operace) zabírá na paměti RAM jen 89MB z dostupného 1GB,
   tedy necelých 10\%.
-
+  \vfill
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{VPS.png}
   \begin{center}
@@ -887,7 +884,7 @@
   údaji  na \emph{VPS}, kde spustí buildAndDeploy \emph{script}. Ten pomocí gitu \emph{pullne} změny na lokální úložiště 
   a spustí \emph{build scripty}, což znamená, že \emph{bundler} překompiluje zdrojové soubory projektu tak, aby byly 
   optimalizované pro použití v produkčním prostředí a aby je dokázal softwarový webový server nabízet uživatelům z vnější sítě.
-  
+  \vfill
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{CIDC_visualization.png}
   \begin{center}
@@ -958,7 +955,7 @@
 
   Ve složce \emph{/etc/nginx/sites-available} se však nachází jen konfigurační soubory webů,
   které jsou podle názvu složky k dispozici, nicméně nejsou aktivně nabízeny uživatelům z vnější sítě. 
-  Abych toho dosáhl, musím vytvořit kopii konfiguračních souborů ve složce \emph{/etc/nginx/sites-enabled}, například pomocí symlinků.
+  Abych toho dosáhl, musím vytvořit kopii konfiguračních souborů ve složce \\ \emph{/etc/nginx/sites-enabled}, například pomocí symlinků.
 
   \begin{bash}
     ln -s /etc/nginx/sites-available/dmpbures.cz 
@@ -978,9 +975,9 @@
   Po spuštění prohlížeče a vyhledání adresy http://159.65.112.226 provede prohlížeč
   požadavek na můj nyní nakonfigurovaný webový server, kde jej Nginx zachytí, přečte si adresu, kterou prohlížeč požaduje a 
   pošle zpět odpovídající \emph{HTML} soubor(y), v tomto případě, jelikož je defaultní port 80, webovou prezentací.
-  Kdyby uživatel vyhledal adresu http://159.65.112.226:81, webový server by odeslal zpět soubory administračního systému a uživatel by tak mohl editovat 
+  Kdyby uživatel vyhledal adresu \\ http://159.65.112.226:81, webový server by odeslal zpět soubory administračního systému a uživatel by tak mohl editovat 
   obsah.
-
+  \vfill
   \vspace*{0.5cm}
   \noindent\includegraphics[width=\linewidth]{VPS_WEB.png}
   \begin{center}
