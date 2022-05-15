@@ -1,20 +1,20 @@
-# :nazev-knihy: - :autor:
+# Máj - Karel Hynek Mácha
 
-**Vydáno:** :rok:
+**Vydáno:** 1836
 
-**Žánr:** :zanr: **Druh:** :druh:
+**Žánr:** Lyricko-epická básnická skladba **Druh:** Lyrikoepika, poezie
 
 ## Téma a motiv
 
-:tema_moti:
+Úvaha o vině a trestu, o tom, zda život končí smrti a co je po ní (Mácha se domnívá, že po smrti je nekonečné nic), oslava Májové příroy
 
 ## Časoprostor
 
-:casoprostor:
+Okolí Bezdědu roku 1836
 
 ## Myšlenka
 
-:myslenka:
+Poukázat na a oslavit krásu májové přírody, autor se zároveň snaží poukázat na tehdejší nevolnost lidí, na jejich soudy, na jejich nesvobodu
 
 ## Jazykové prostředky a styl
 

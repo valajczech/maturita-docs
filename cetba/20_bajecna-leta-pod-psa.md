@@ -36,20 +36,5 @@ Vše začíná poněkud originálním narozením hlavního hrdiny této knihy - 
 
 - **Čeští autoři:** Pavel Kohut, Ludvík Vaculík
 
-\pagebreak
 
-# Michal Viewegh
 
-- prozaik, fejetonista, publicista
-- vystudoval UK, tři roky pracoval jako učitel na ZŠ
-- poté pracoval jako redaktor v nakladatelství, rozhodl se, že se bude psaní sám věnovat
-- náměty hledá v osobním životě, humoristický odstup a ironicko-groteskní tón, svěží, lehké a poutavé vyprávění, prolíná dramatické situace s komickými
-- mnoho jeho knih bylo zfilmováno
-
-## Dílo
-
-- Výchova dívek v Čechách
-- Účastníci zájezdu
-- Román pro ženy
-- Román pro muže
-- Povídky o biomanželství a sexu
