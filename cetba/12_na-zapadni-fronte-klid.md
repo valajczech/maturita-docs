@@ -1,4 +1,4 @@
-# :nazev-knihy: - :autor:
+# Na západní frontě klid - Erich Maria Remarque
 
 - **Vydáno:** 1929
 

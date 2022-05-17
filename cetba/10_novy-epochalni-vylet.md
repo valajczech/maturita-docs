@@ -2,11 +2,15 @@
 
 **Vydáno:** 1888
 
+**Žánr:** Povídka **Druh:** Epika
+
 ## Téma a motiv
 
 Hlavní myšlenkou je kritika společnosti demonstrovaná na kontrastu vlastenectví a odvahy husitů v boji proti Němcům, kdežto moderní společnost se od vlasti odvrací a přiklání se k Němcům. Autor pranýřuje bezzásadovost českého měšťáka.
 
 ## Časoprostor
+
+Středověká a novověká Praha 19. a 15. století
 
 ## Jazykové prostředky a styl
 

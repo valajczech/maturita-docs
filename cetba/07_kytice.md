@@ -2,7 +2,7 @@
 
 **Vydáno:** 1853
 
-**Žánr:** Balada **Druh:** Epika
+**Žánr:** Sbírka balad **Druh:** Epika
 
 ## Téma a motiv
 
